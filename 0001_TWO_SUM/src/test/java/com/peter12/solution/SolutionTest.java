@@ -55,13 +55,13 @@ public class SolutionTest
     	int target = 9;
     	
     	int result = Solution.getBiggest(select, nums, target);
+    	Assert.assertTrue(result == 2 );
+    	
+    	result = Solution.getBiggest(select, nums, target);
     	Assert.assertTrue(result == 7 );
     	
     	result = Solution.getBiggest(select, nums, target);
     	Assert.assertTrue(result == 5 );
-    	
-    	result = Solution.getBiggest(select, nums, target);
-    	Assert.assertTrue(result == 2 );
     	
     	result = Solution.getBiggest(select, nums, target);
     	Assert.assertTrue(result == 0 );
@@ -70,16 +70,23 @@ public class SolutionTest
     	select = new boolean [4];
     	target = 0;
     	result = Solution.getBiggest(select, nums3, target);
-    	Assert.assertTrue(result == 0 );
+    	Assert.assertTrue(result == -3 );
     	
     	
     }
     
     public static void testGetResult() {
-    	int[] nums = new int[] {2, 7 , 11, 5};
-    	int target = 9;
+    	int[] nums5 = new int[] {-10,-1,-18,-19};
+    	int target = -19;
     	
-    	int[] result = Solution.twoSum(nums, target);
+    	int[] result = Solution.twoSum(nums5, target);
+    	
+    	Assert.assertTrue(result.length == 1 && result[0] == 3);
+    	
+    	int[] nums = new int[] {2, 7 , 11, 5};
+    	target = 9;
+    	
+    	 result = Solution.twoSum(nums, target);
     	
     	Assert.assertTrue(result.length == 2 && result[0] == 0 && result[1] == 1);
     	
@@ -109,6 +116,12 @@ public class SolutionTest
     	
     	result = Solution.twoSum(nums4, target);
     	
-    	Assert.assertTrue(result.length == 2 && result[0] == 0 && result[1] == 2);
+    	Assert.assertTrue(result.length == 2 && result[0] == 2 && result[1] == 4);
+    	
+    	
+    	
+    	
+    	
+    	
     }
 }
