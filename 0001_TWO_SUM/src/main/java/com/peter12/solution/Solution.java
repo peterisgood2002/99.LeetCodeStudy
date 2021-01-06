@@ -23,13 +23,22 @@ public class Solution
 
 			select[i] = false;
 		}
+		
+		//if target is negative, we need to revert all nums in case stack overflow
+		if( target < 0 ) {
+			for( int i = 0; i < nums.length; i++ ) {
+				nums[i] = - nums[i];
+			}
+			
+			target = - target;
+		}
 
 		return getResult(select, nums, target);
 
 	}
 
 	public static int[] getResult(boolean[] select, int[] nums, int target) {
-		if( target == 0 ) {
+		if( target == 0 && !hasMinusNumber(select, nums)) {
 			return getResult(select, nums);
 		}
 
@@ -38,13 +47,26 @@ public class Solution
 
 		return getResult(select, nums, target - biggest);
 	}
+	
+	public static boolean hasMinusNumber(boolean[] select, int[] nums) {
+		
+		boolean result = false;
+		
+		for( int i = 0; i < nums.length; i++ ) {
+			if( !select[i] && nums[i] < 0 ) {
+				result = true;
+			}
+		}
+		
+		return result;
+	}
 
 	public static int getBiggest(boolean[] select, int[] nums, int target) {
 		//1. Obtain the biggest number that is smaller than target and is not selected
 		int number = Integer.MIN_VALUE;
 		int index = -1;
 		for( int i = 0; i < select.length; i++ ) {
-			if( select[i] == false && nums[i] <= target && number < nums[i] ) {
+			if( select[i] == false && nums[i] <= target && number < nums[i] || nums[i] <= 0 ) {
 				number = nums[i];
 				index = i;
 
