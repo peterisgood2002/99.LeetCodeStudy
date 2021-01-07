@@ -37,7 +37,6 @@ We also note the progress and experiences daily.
         <p>
           <ol>
              <li>We can save lots of time while following the hints. However, I do not think it's not a good idea</li>
-            
           </ol>
         </p>
     </th>
