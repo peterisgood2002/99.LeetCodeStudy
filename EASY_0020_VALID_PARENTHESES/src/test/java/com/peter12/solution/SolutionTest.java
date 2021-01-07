@@ -40,6 +40,7 @@ public class SolutionTest
     
     public static void testGetResult() {
     	
+    	Assert.assertEquals( Solution.isValid("(([]){})"), true);
     	
     	Assert.assertEquals( Solution.isValid("{}{}()[]"), true);
     	Assert.assertEquals( Solution.isValid("(){}}{"), false);

@@ -10,52 +10,32 @@ public class Solution {
 			return true;
 		} else if ( s.length() == 1 ) {
 			return false;
-		} 
-		
-        //1. Get the first element of String
-		char first = s.charAt(0);
-		
-		//2. retrieve the reciprocal element from the last element of String
-		char corresponding = getReciprocalElement(first);
-		if( corresponding == 'A') {
-			return false;
+		} else if ( s.length() == 2 ) {
+			return s.equals("()") || s.equals("[]") || s.equals("{}");
 		}
 		
-		int last = s.indexOf(corresponding);
-		if( last == -1 ) {
-			//We can not find related part
-			return false;
-		} 
+		String data = s;
+		data = remove(data, "()");
+		data = remove(data, "[]");
+		data = remove(data, "{}");
 		
-		
-		//3. split the String into two parts
-		String firstPart = s.substring(1, last);
-		String secondPart = s.substring(last + 1);
-		if( last == 1 ) {
-			return isValid(secondPart);
+		if( !data.equals(s)) {
+			return isValid(data);
 		} else {
-			return isValid(firstPart) && isValid(secondPart);
+			return false;
 		}
 		
-		
-	
 		
     }
 	
-	
-	public static char getReciprocalElement(char c) {
-		if( c == '(') {
-			return ')';
+	public static String remove( String s, String parentheses) {
+		
+		while( s.contains(parentheses)) {
+			 s = s.replace(parentheses, "");
+		
 		}
 		
-		if( c == '[') {
-			return ']';
-		}
-		
-		if( c == '{') {
-			return '}';
-		}
-		
-		return 'A';
+		return s;
 	}
+	
 }
