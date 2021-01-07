@@ -40,6 +40,7 @@ public class SolutionTest
     
     public static void testGetResult() {
     	
+    	Assert.assertEquals(Solution.reverse(1534236469), 0);
     	Assert.assertEquals(Solution.reverse(123), 321);
     	Assert.assertEquals(Solution.reverse(-123), -321);
     	Assert.assertEquals(Solution.reverse(120), 21);
