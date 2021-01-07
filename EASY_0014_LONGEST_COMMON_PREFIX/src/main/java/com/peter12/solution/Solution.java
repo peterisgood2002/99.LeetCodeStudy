@@ -29,8 +29,7 @@ public class Solution {
 			
 			for( int j = 1; j < strs.length; j++ ) {
 				if( word != strs[j].charAt(i) ) {
-					commonPrefix = false;
-					break;
+					return result;
 				}
 				
 			}
