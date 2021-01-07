@@ -12,7 +12,7 @@ We also note the progress and experiences daily.
     <th>Type</th>
     <th>Goal</th>
     <th>Actual</th>
-    <th>Experience</th>
+    <th>Lesson Learn</th>
   </tr>
   <tr>
     <th>2020107</th>
@@ -24,6 +24,20 @@ We also note the progress and experiences daily.
           <ol>
              <li>Because we use Eclipse as our IDE, it's necessary to create every projects everyday before solving the issues.</li>
              <li>We spent lots of time because we do not understand the key description.</li>
+          </ol>
+        </p>
+    </th>
+  </tr>
+  <tr>
+    <th>2020107</th>
+    <th>Easy</th>
+    <th>24</th>
+    <th>6</th>
+    <th>
+        <p>
+          <ol>
+             <li>We can save lots of time while following the hints. However, I do not think it's not a good idea</li>
+            
           </ol>
         </p>
     </th>
