@@ -17,8 +17,12 @@ public class Solution {
 			}
 		}
 		
+		if(smallestLength == Integer.MAX_VALUE) {
+			return result;
+		}
+		
 		//2. Compare each character
-		for( int i = 0; i < smallestLength; i++ ) {
+		for( int i = 0; i < smallestLength - 1; i++ ) {
 			
 			char word = strs[0].charAt(i);
 			boolean commonPrefix = true;
