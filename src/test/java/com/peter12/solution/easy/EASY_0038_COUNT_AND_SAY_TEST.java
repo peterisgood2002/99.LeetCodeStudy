@@ -45,7 +45,7 @@ public class EASY_0038_COUNT_AND_SAY_TEST
     
     
     public static void testGetResult() {
-    	
+    	Assert.assertEquals("111221", EASY_0038_COUNT_AND_SAY.countAndSay(5));
     	Assert.assertEquals("21", EASY_0038_COUNT_AND_SAY.countAndSay(3));
     	Assert.assertEquals("1", EASY_0038_COUNT_AND_SAY.countAndSay(1));
     	Assert.assertEquals("11", EASY_0038_COUNT_AND_SAY.countAndSay(2));

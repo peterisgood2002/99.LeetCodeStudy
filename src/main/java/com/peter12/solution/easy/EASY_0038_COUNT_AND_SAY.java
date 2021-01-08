@@ -1,6 +1,8 @@
 package com.peter12.solution.easy;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Vector;
 
 public class EASY_0038_COUNT_AND_SAY {
 	
@@ -12,33 +14,41 @@ public class EASY_0038_COUNT_AND_SAY {
 		String say = countAndSay( n - 1 );
 		
 		//1. count each digit
-		HashMap<String, Integer> count = new HashMap<String, Integer>();
-		for( int i = 0; i < say.length(); i++ ) {
-			String ch = say.substring( i, i + 1 );
-			Integer c = count.get(ch);
-			
-			if( c != null ) {
-				c++;
-			} else {
-				c = 1;
-			}
-			
-			count.put(ch, c);
-		}
+	    
+		String pre = "";
+		int count = 0;
 		
-		//2. Say
 		String result = "";
 		for( int i = 0; i < say.length(); i++ ) {
-			String ch = say.substring( i, i + 1 );
-			Integer c = count.remove(ch);
-			if( c != null ) {
-				result += c.toString() + ch; 
+						
+			String ch = say.substring(i, i+ 1);
+			
+			if( "".equals(pre) ) {
+				//Initialize
+				pre = ch;
+	
 			}
 			
+			if( pre.equals(ch) ) {
+				count++;
+			} else {
+				//1. add to digit and count List
+				result += count + pre;
+				
+				//2. count new character
+				pre = ch;
+				count = 1;
+							
+			}
+			
+			//decide the last items
+			if( i == say.length() - 1 ) {
+				result += count + pre;
+			}
 		}
 		
+		
+		
 		return result;
-		
-		
 	}
 }
