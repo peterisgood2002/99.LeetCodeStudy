@@ -15,7 +15,9 @@ public class EASY_0028_IMPLEMENT_STRSTR {
 		
 		int needleSize = needle.length();
 		
-		for( int i = 0; i < haystack.length() - needleSize; i += needleSize) {
+		
+		
+		for( int i = 0; i <= haystack.length() - needleSize; i++) {
 			String sub = haystack.substring(i, i + needleSize  );
 			
 			if(sub.equals(needle)) {
