@@ -41,6 +41,15 @@ We also note the progress and experiences daily.
         </p>
     </th>
   </tr>
+  <tr>
+    <th>2020107</th>
+    <th>Easy</th>
+    <th>36</th>
+    <th>12</th>
+    <th>
+      
+    </th>
+  </tr>
   
 </table>
 
