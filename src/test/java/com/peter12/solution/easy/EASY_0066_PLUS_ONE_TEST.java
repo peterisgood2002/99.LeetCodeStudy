@@ -46,8 +46,29 @@ public class EASY_0066_PLUS_ONE_TEST
     
     public static void testGetResult() {
     	
-    	int[] digits = new int[] {1, 2, 3};
-    	int[] result = new int[] {1, 2, 4};
+    	int[] digits = new int[] {0, 9};
+    	int[] result = new int[] {1 ,0};
+    	Assert.assertTrue(equalsForArray(result, EASY_0066_PLUS_ONE.plusOne(digits)));
+    	
+    	digits = new int[] {0, 0};
+    	result = new int[] {0 ,1};
+    	Assert.assertTrue(equalsForArray(result, EASY_0066_PLUS_ONE.plusOne(digits)));
+    	
+    	digits = new int[] {9, 9};
+    	result = new int[] {1 ,0, 0};
+    	Assert.assertTrue(equalsForArray(result, EASY_0066_PLUS_ONE.plusOne(digits)));
+    	
+    	digits = new int[] {9,8,7,6,5,4,3,2,1,0};
+    	result = new int[] {9,8,7,6,5,4,3,2,1,1};
+    	Assert.assertTrue(equalsForArray(result, EASY_0066_PLUS_ONE.plusOne(digits)));
+    	
+    	
+    	digits = new int[] {1, 0, 1};
+        result = new int[] {1, 0, 2};
+    	Assert.assertTrue(equalsForArray(result, EASY_0066_PLUS_ONE.plusOne(digits)));
+    	
+    	digits = new int[] {1, 2, 3};
+        result = new int[] {1, 2, 4};
     	Assert.assertTrue(equalsForArray(result, EASY_0066_PLUS_ONE.plusOne(digits)));
     	
     	digits = new int[] {4, 3, 2, 1};
@@ -58,9 +79,7 @@ public class EASY_0066_PLUS_ONE_TEST
     	result = new int[] {1};
     	Assert.assertTrue(equalsForArray(result, EASY_0066_PLUS_ONE.plusOne(digits)));
     	
-    	digits = new int[] {9,8,7,6,5,4,3,2,1,0};
-    	result = new int[] {9,8,7,6,5,4,3,2,1,1};
-    	Assert.assertTrue(equalsForArray(result, EASY_0066_PLUS_ONE.plusOne(digits)));
+    	
     	
     	
     }

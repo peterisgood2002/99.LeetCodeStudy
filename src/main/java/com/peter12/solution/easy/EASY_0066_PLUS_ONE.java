@@ -6,24 +6,32 @@ import java.util.Vector;
 public class EASY_0066_PLUS_ONE {
 	public static int[] plusOne(int[] digits) {
 
-		int data = 0;
-		for( int i = 0; i < digits.length; i++) {
-			data += digits[digits.length - 1 - i ] * Math.pow(10, i);
+		//Initialize
+		int[] data = new int[digits.length + 1];
+		data[0] = 0;
+		for( int i = 0; i < digits.length; i++ ) {
+			data[i + 1] = digits[i];
 		}
 		
-		data++;
-
-		List<Integer> r = new Vector<Integer>();
-		while( data >= 1 ) {
-			r.add( data % 10);
-			
-			data /= 10;
-		}
+		//plus 1
+		int size = data.length - 1;
+		int val = data[size] + 1;
+		do {
+			if(val < 10 ) {
+				data[size] = val;
+			} else {
+				data[size] = 0;
+				val = ++data[ --size];
+			}
+		} while(val >= 10);
 		
-		int size = r.size();
-		int[] result = new int[ size ];
-		for(int i = 0; i < size; i++  ) {
-			result[i] = r.get(size - 1 - i);
+		//assemble result
+		size = (data[0] == 0 ) ? data.length - 1: data.length;
+		int dataIndex = (data[0] == 0 ) ? 1: 0;
+		
+		int[] result = new int[size];
+		for( int i = 0; i < result.length; i++ ) {
+			result[i] = data[ dataIndex++ ];
 		}
 		
 		return result;
