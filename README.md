@@ -45,9 +45,25 @@ We also note the progress and experiences daily.
     <th>2020107</th>
     <th>Easy</th>
     <th>36</th>
-    <th>12</th>
+    <th>17</th>
     <th>
       
+    </th>
+  </tr>
+  <tr>
+    <th>2020107</th>
+    <th>Easy</th>
+    <th>36</th>
+    <th>12</th>
+    <th>
+		<p>
+          <ol>
+             <li>Kadane’s Algorithm or Dynamic Programing is very interesting; however it is very hard to reminiscent of while solving the issue  
+			 </li>
+			 <li>Usually precision of integer is a bigger question while we solve the issues relating to number. Please use double as type while solving number questions.  
+			 </li>
+          </ol>
+        </p>
     </th>
   </tr>
   
