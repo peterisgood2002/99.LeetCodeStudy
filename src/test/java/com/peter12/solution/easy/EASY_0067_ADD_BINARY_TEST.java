@@ -45,6 +45,7 @@ public class EASY_0067_ADD_BINARY_TEST
     
     
     public static void testGetResult() {
+    	Assert.assertEquals("11110", EASY_0067_ADD_BINARY.addBinary("1111", "1111"));
     	Assert.assertEquals("10101", EASY_0067_ADD_BINARY.addBinary("1010", "1011"));
     	
     	Assert.assertEquals("10", EASY_0067_ADD_BINARY.addBinary("1", "1"));
