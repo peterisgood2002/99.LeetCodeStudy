@@ -8,7 +8,7 @@ public class EASY_0053_MAXIMUM_SUBARRAY {
 			return nums[0];
 		}
 		int result = Integer.MIN_VALUE;
-		for( int i = 1; i < size; i++ ) {
+		for( int i = 1; i <= size; i++ ) {
 			
 			int total = findMax(nums, i);
 			
@@ -23,7 +23,7 @@ public class EASY_0053_MAXIMUM_SUBARRAY {
 	public static int findMax(int[] nums, int size) {
 
 		int result = Integer.MIN_VALUE;
-		for ( int i = 0; i < nums.length - size; i++ ) {
+		for ( int i = 0; i <= nums.length - size; i++ ) {
 
 			int total = 0;
 			for( int j = 0; j < size; j++ ) {

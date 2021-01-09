@@ -56,6 +56,21 @@ public class EASY_0053_MAXIMUM_SUBARRAY_TEST
     	
     	nums1 = new int[] { 0 };
     	Assert.assertEquals(0, EASY_0053_MAXIMUM_SUBARRAY.maxSubArray(nums1));
+    	
+    	nums1 = new int[] { -2, 1 };
+    	
+    	Assert.assertEquals(1, EASY_0053_MAXIMUM_SUBARRAY.maxSubArray(nums1));
+    	
+    	nums1 = new int[] { -2, -1 };
+    	
+    	EASY_0053_MAXIMUM_SUBARRAY.findMax(nums1, 1);
+    	Assert.assertEquals( -1, EASY_0053_MAXIMUM_SUBARRAY.maxSubArray(nums1));
+    	
+    	nums1 = new int[] { 1, 2 };
+    	
+    	Assert.assertEquals(3, EASY_0053_MAXIMUM_SUBARRAY.maxSubArray(nums1));
+    	
+    	
     }
     
     
