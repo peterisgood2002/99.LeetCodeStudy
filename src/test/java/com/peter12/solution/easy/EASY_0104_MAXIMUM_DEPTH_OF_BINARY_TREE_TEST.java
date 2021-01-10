@@ -6,7 +6,7 @@ import java.util.Vector;
 import com.peter12.solution.data.ListNode;
 import com.peter12.solution.data.TreeNode;
 import com.peter12.solution.easy.EASY_0020_VALID_PARENTHESES;
-import com.peter12.solution.util.ArrayUtil;
+import com.peter12.solution.util.Util;
 
 import junit.framework.Assert;
 import junit.framework.Test;
