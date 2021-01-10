@@ -64,66 +64,14 @@ public class EASY_0021_MERGE_TWO_SORTED_LISTS_TEST
     
     
     public static void testResult(int[] d1, int[] d2, int[] answer) {
-    	ListNode lista = getLinkList(answer);
-    	ListNode list1 = getLinkList(d1);
-    	ListNode list2 = getLinkList(d2);
+    	ListNode lista = ListNode.getLinkList(answer);
+    	ListNode list1 = ListNode.getLinkList(d1);
+    	ListNode list2 = ListNode.getLinkList(d2);
     	
     	
     	ListNode result = EASY_0021_MERGE_TWO_SORTED_LISTS.mergeTwoLists(list1, list2);
     	
-    	Assert.assertTrue( theSameList(result, lista) );
+    	Assert.assertTrue( ListNode.theSameList(result, lista) );
     }
-    public static ListNode getLinkList(int[] data) {
-    	ListNode result = null;
-    	
-    	if( data == null ) {
-    		return result;
-    	}
-    	
-    	for( int i = data.length - 1; i >= 0; i-- ) {
-    		ListNode pre = new ListNode(data[i], result);
-    		
-    		result = pre;
-    		
-    	}
-    	
-    	return result;
-    }
-    
-    public static boolean theSameList(ListNode l1, ListNode l2) {
-    	int size1 = getListSize(l1);
-    	int size2 = getListSize(l1);
-    	
-    	if( size1 != size2 ) {
-    		return false;
-    	} else {
-    		
-    		ListNode point1 = l1;
-    		ListNode point2 = l2;
-    		while ( point1 != null ) {
-    			if( point1.val != point2.val ) {
-    				return false;
-    			} else {
-    				point1 = point1.next;
-    				point2 = point2.next;
-    			}
-    		}
-    		
-    		return true;
-    	}
-    	
-    }
-    
-    public static int getListSize(ListNode data) {
-		int result = 0;
-		
-		while ( data != null ) {
-			result++;
-			
-			data = data.next;
-		}
-		
-		return result;
-	}
     
 }
