@@ -47,14 +47,14 @@ public class EASY_0035_SEARCH_INSERT_POSITION_TEST
     public static void testGetResult() {
     	
     	int[] nums = new int[] {1, 3, 5, 6};
-    	Assert.assertEquals(EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums, 7), 4);
-    	Assert.assertEquals(EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums, 2), 1);
-    	Assert.assertEquals(EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums, 5), 2);
+    	Assert.assertEquals(4, EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums, 7) );
+    	Assert.assertEquals(1, EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums, 2) );
+    	Assert.assertEquals(2, EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums, 5) );
     	
-    	Assert.assertEquals(EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums, 0), 0);
+    	Assert.assertEquals(0, EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums, 0) );
     	
     	int[] nums1 = new int[] {1};
-    	Assert.assertEquals(EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums1, 0), 0);
+    	Assert.assertEquals(0, EASY_0035_SEARCH_INSERT_POSITION.searchInsert(nums1, 0) );
     }
     
     

@@ -44,23 +44,23 @@ public class EASY_0013_ROMAN_TO_INTEGER_TEST
     
     public static void testGetResult() {
     	
-    	Assert.assertEquals(EASY_0013_ROMAN_TO_INTEGER.romanToInt("IV"), 4);
+    	Assert.assertEquals( 4,    EASY_0013_ROMAN_TO_INTEGER.romanToInt("IV") );
     	
-    	Assert.assertEquals(EASY_0013_ROMAN_TO_INTEGER.romanToInt("IX"), 9);
+    	Assert.assertEquals( 9,    EASY_0013_ROMAN_TO_INTEGER.romanToInt("IX") );
     	
-    	Assert.assertEquals(EASY_0013_ROMAN_TO_INTEGER.romanToInt("XL"), 40);
+    	Assert.assertEquals( 40,   EASY_0013_ROMAN_TO_INTEGER.romanToInt("XL") );
     	
-    	Assert.assertEquals(EASY_0013_ROMAN_TO_INTEGER.romanToInt("XC"), 90);
+    	Assert.assertEquals( 90,   EASY_0013_ROMAN_TO_INTEGER.romanToInt("XC") );
 
-    	Assert.assertEquals(EASY_0013_ROMAN_TO_INTEGER.romanToInt("CD"), 400);
+    	Assert.assertEquals( 400,  EASY_0013_ROMAN_TO_INTEGER.romanToInt("CD") );
     	
-    	Assert.assertEquals(EASY_0013_ROMAN_TO_INTEGER.romanToInt("CM"), 900);
+    	Assert.assertEquals( 900,  EASY_0013_ROMAN_TO_INTEGER.romanToInt("CM") );
     	
 
     	//
-    	Assert.assertEquals(EASY_0013_ROMAN_TO_INTEGER.romanToInt("LVIII"), 58);
+    	Assert.assertEquals( 58,   EASY_0013_ROMAN_TO_INTEGER.romanToInt("LVIII") );
     	
-    	Assert.assertEquals(EASY_0013_ROMAN_TO_INTEGER.romanToInt("MCMXCIV"), 1994);
+    	Assert.assertEquals( 1994, EASY_0013_ROMAN_TO_INTEGER.romanToInt("MCMXCIV") );
     	
     }
 }

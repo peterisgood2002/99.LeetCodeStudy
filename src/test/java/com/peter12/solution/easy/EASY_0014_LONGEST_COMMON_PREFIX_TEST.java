@@ -41,12 +41,12 @@ public class EASY_0014_LONGEST_COMMON_PREFIX_TEST
     
     
     public static void testGetResult() {
-    	Assert.assertEquals(EASY_0014_LONGEST_COMMON_PREFIX.longestCommonPrefix(new String[] {"cir","car"} ), "c");
+    	Assert.assertEquals( "c",  EASY_0014_LONGEST_COMMON_PREFIX.longestCommonPrefix(new String[] {"cir","car"}) );
     	
-    	Assert.assertEquals(EASY_0014_LONGEST_COMMON_PREFIX.longestCommonPrefix(new String[] {} ), "");
-    	Assert.assertEquals(EASY_0014_LONGEST_COMMON_PREFIX.longestCommonPrefix(new String[] {"flower","flow","flight"} ), "fl");
+    	Assert.assertEquals( "",   EASY_0014_LONGEST_COMMON_PREFIX.longestCommonPrefix(new String[] {}) );
+    	Assert.assertEquals( "fl", EASY_0014_LONGEST_COMMON_PREFIX.longestCommonPrefix(new String[] {"flower","flow","flight"}) );
     	
-    	Assert.assertEquals(EASY_0014_LONGEST_COMMON_PREFIX.longestCommonPrefix(new String[] {"dog","racecar","car"} ), "");
+    	Assert.assertEquals( "",   EASY_0014_LONGEST_COMMON_PREFIX.longestCommonPrefix(new String[] {"dog","racecar","car"} ));
     	
     	
     }

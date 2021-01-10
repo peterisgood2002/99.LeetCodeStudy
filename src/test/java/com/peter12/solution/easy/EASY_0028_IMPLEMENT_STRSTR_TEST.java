@@ -46,12 +46,12 @@ public class EASY_0028_IMPLEMENT_STRSTR_TEST
     
     public static void testGetResult() {
     	
-    	Assert.assertEquals(EASY_0028_IMPLEMENT_STRSTR.strStr("a", "a"), 0);
-    	Assert.assertEquals(EASY_0028_IMPLEMENT_STRSTR.strStr("mississippi", "issi"), 1);
+    	Assert.assertEquals(0,  EASY_0028_IMPLEMENT_STRSTR.strStr("a", "a") );
+    	Assert.assertEquals(1,  EASY_0028_IMPLEMENT_STRSTR.strStr("mississippi", "issi") );
     	
-    	Assert.assertEquals(EASY_0028_IMPLEMENT_STRSTR.strStr("hello", "ll"), 2);
-    	Assert.assertEquals(EASY_0028_IMPLEMENT_STRSTR.strStr("aaaaa", "bba"), -1);
-    	Assert.assertEquals(EASY_0028_IMPLEMENT_STRSTR.strStr("", ""), 0);
+    	Assert.assertEquals(2,  EASY_0028_IMPLEMENT_STRSTR.strStr("hello", "ll") );
+    	Assert.assertEquals(-1, EASY_0028_IMPLEMENT_STRSTR.strStr("aaaaa", "bba") );
+    	Assert.assertEquals(0,  EASY_0028_IMPLEMENT_STRSTR.strStr("", "") );
     	
     	
     }

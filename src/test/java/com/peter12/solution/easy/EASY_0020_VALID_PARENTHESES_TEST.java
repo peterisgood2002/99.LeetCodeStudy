@@ -42,19 +42,19 @@ public class EASY_0020_VALID_PARENTHESES_TEST
     
     public static void testGetResult() {
     	
-    	Assert.assertEquals( EASY_0020_VALID_PARENTHESES.isValid("(([]){})"), true);
+    	Assert.assertEquals( true,  EASY_0020_VALID_PARENTHESES.isValid("(([]){})") );
     	
-    	Assert.assertEquals( EASY_0020_VALID_PARENTHESES.isValid("{}{}()[]"), true);
-    	Assert.assertEquals( EASY_0020_VALID_PARENTHESES.isValid("(){}}{"), false);
+    	Assert.assertEquals( true,  EASY_0020_VALID_PARENTHESES.isValid("{}{}()[]") );
+    	Assert.assertEquals( false, EASY_0020_VALID_PARENTHESES.isValid("(){}}{") );
     	
-    	Assert.assertEquals( EASY_0020_VALID_PARENTHESES.isValid("()"), true);
+    	Assert.assertEquals( true,  EASY_0020_VALID_PARENTHESES.isValid("()") );
     	
-    	Assert.assertEquals( EASY_0020_VALID_PARENTHESES.isValid("(]"), false);
+    	Assert.assertEquals( false, EASY_0020_VALID_PARENTHESES.isValid("(]") );
     	
-    	Assert.assertEquals( EASY_0020_VALID_PARENTHESES.isValid("([)]"), false);
+    	Assert.assertEquals( false, EASY_0020_VALID_PARENTHESES.isValid("([)]") );
     	
-    	Assert.assertEquals( EASY_0020_VALID_PARENTHESES.isValid("()[]{}"), true);
+    	Assert.assertEquals( true,  EASY_0020_VALID_PARENTHESES.isValid("()[]{}") );
     	
-    	Assert.assertEquals( EASY_0020_VALID_PARENTHESES.isValid("{[]}"), true);
+    	Assert.assertEquals( true,  EASY_0020_VALID_PARENTHESES.isValid("{[]}") );
     }
 }

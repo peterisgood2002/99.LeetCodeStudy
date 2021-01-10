@@ -47,11 +47,11 @@ public class EASY_0027_REMOVE_ELEMENT_TEST
     public static void testGetResult() {
     	int[] nums1 = new int[] {3,2,2,3 };
     	
-    	Assert.assertEquals( EASY_0027_REMOVE_ELEMENT.removeElement(nums1, 3), 2);
+    	Assert.assertEquals( 2, EASY_0027_REMOVE_ELEMENT.removeElement(nums1, 3) );
     	
     	nums1 = new int[] {0,1,2,2,3,0,4,2};
     	
-    	Assert.assertEquals( EASY_0027_REMOVE_ELEMENT.removeElement(nums1, 2), 5);
+    	Assert.assertEquals( 5, EASY_0027_REMOVE_ELEMENT.removeElement(nums1, 2) );
     	
     	
     	

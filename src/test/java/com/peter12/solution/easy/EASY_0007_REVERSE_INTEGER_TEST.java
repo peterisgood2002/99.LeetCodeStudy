@@ -42,11 +42,11 @@ public class EASY_0007_REVERSE_INTEGER_TEST
     
     public static void testGetResult() {
     	
-    	Assert.assertEquals(EASY_0007_REVERSE_INTEGER.reverse(1534236469), 0);
-    	Assert.assertEquals(EASY_0007_REVERSE_INTEGER.reverse(123), 321);
-    	Assert.assertEquals(EASY_0007_REVERSE_INTEGER.reverse(-123), -321);
-    	Assert.assertEquals(EASY_0007_REVERSE_INTEGER.reverse(120), 21);
-    	Assert.assertEquals(EASY_0007_REVERSE_INTEGER.reverse(0), 0);
+    	Assert.assertEquals( 0, EASY_0007_REVERSE_INTEGER.reverse(1534236469) );
+    	Assert.assertEquals( 321, EASY_0007_REVERSE_INTEGER.reverse(123) );
+    	Assert.assertEquals( -321, EASY_0007_REVERSE_INTEGER.reverse(-123) );
+    	Assert.assertEquals( 21, EASY_0007_REVERSE_INTEGER.reverse(120) );
+    	Assert.assertEquals( 0, EASY_0007_REVERSE_INTEGER.reverse(0) );
     	
     	
     	
