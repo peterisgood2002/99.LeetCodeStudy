@@ -29,7 +29,7 @@ We also note the progress and experiences daily.
     </th>
   </tr>
   <tr>
-    <th>2020107</th>
+    <th>2020108</th>
     <th>Easy</th>
     <th>24</th>
     <th>6</th>
@@ -42,7 +42,7 @@ We also note the progress and experiences daily.
     </th>
   </tr>
   <tr>
-    <th>2020107</th>
+    <th>2020109</th>
     <th>Easy</th>
     <th>36</th>
     <th>17</th>
@@ -51,17 +51,17 @@ We also note the progress and experiences daily.
     </th>
   </tr>
   <tr>
-    <th>2020107</th>
+    <th>2020110</th>
     <th>Easy</th>
-    <th>36</th>
-    <th>12</th>
+    <th>48</th>
+    <th>25</th>
     <th>
 		<p>
           <ol>
-             <li>Kadane’s Algorithm or Dynamic Programing is very interesting; however it is very hard to reminiscent of while solving the issue  
+             <li>It's clear that separate the result from the algorithm. We should perform algorithm and then save the result.
+			     If our algoruthm is interwoven with result, it is so difficult to debug and find out the solution
 			 </li>
-			 <li>Usually precision of integer is a bigger question while we solve the issues relating to number. Please use double as type while solving number questions.  
-			 </li>
+			 
           </ol>
         </p>
     </th>
