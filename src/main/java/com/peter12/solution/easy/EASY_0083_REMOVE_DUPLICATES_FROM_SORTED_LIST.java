@@ -4,22 +4,27 @@ import com.peter12.solution.data.ListNode;
 
 public class EASY_0083_REMOVE_DUPLICATES_FROM_SORTED_LIST {
 	public static ListNode deleteDuplicates(ListNode head) {
-		ListNode point = head;
+		if( head == null ) {
+			return head;
+		}
 		
-		int value = point.val;
-		
-		while( point.next != null ) {
+		ListNode current = head;
+		while( current != null  ) {
 			
-			ListNode next = point.next;
-			
-			if( next.val == value ) {
-				point.next = next.next;
-				point = next.next;
-				
+			ListNode next = current.next;
+			if( next != null ) {
+				if( next.val == current.val ) {
+					current.next = next.next;
+					
+					next.next = null;// disconnect the link
+				} else {
+					//move current because value is different.
+					current = current.next;
+				}
 			} else {
-				value = next.val;
-				point.next = next;
+				break;
 			}
+		
 		}
 		
 		return head;

@@ -46,13 +46,14 @@ public class EASY_0083_REMOVE_DUPLICATES_FROM_SORTED_LIST_TEST
     
     public static void testGetResult() {
     	
-    	int[] d1 = new int[] {1, 1, 2};
-    	int[] answer = new int[] {1, 2};
+    	int[] d1 = new int[] {1, 1, 1};
+    	int[] answer = new int[] {1};
     	
     	ListNode ld1 = ListNode.getLinkList(d1);
     	ListNode la = ListNode.getLinkList(answer);
     	
     	Assert.assertTrue( ListNode.theSameList(EASY_0083_REMOVE_DUPLICATES_FROM_SORTED_LIST.deleteDuplicates(ld1), la));
+    	
     	
     	d1 = new int[] {1, 1, 2, 3, 3};
     	answer = new int[] {1, 2, 3};
@@ -62,8 +63,31 @@ public class EASY_0083_REMOVE_DUPLICATES_FROM_SORTED_LIST_TEST
     	
     	Assert.assertTrue( ListNode.theSameList(EASY_0083_REMOVE_DUPLICATES_FROM_SORTED_LIST.deleteDuplicates(ld1), la));
     	
+    	d1 = new int[] {1, 1};
+    	answer = new int[] {1};
     	
-    
+    	ld1 = ListNode.getLinkList(d1);
+    	la = ListNode.getLinkList(answer);
+    	
+    	Assert.assertTrue( ListNode.theSameList(EASY_0083_REMOVE_DUPLICATES_FROM_SORTED_LIST.deleteDuplicates(ld1), la));
+    	
+    	
+    	d1 = new int[] {1, 1, 2};
+    	answer = new int[] {1, 2};
+    	
+    	ld1 = ListNode.getLinkList(d1);
+    	la = ListNode.getLinkList(answer);
+    	
+    	Assert.assertTrue( ListNode.theSameList(EASY_0083_REMOVE_DUPLICATES_FROM_SORTED_LIST.deleteDuplicates(ld1), la));
+    	
+    	d1 = new int[] {1, 2};
+    	answer = new int[] {1, 2};
+    	
+    	ld1 = ListNode.getLinkList(d1);
+    	la = ListNode.getLinkList(answer);
+    	
+    	Assert.assertTrue( ListNode.theSameList(EASY_0083_REMOVE_DUPLICATES_FROM_SORTED_LIST.deleteDuplicates(ld1), la));
+    	
     }
     
    
