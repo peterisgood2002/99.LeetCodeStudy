@@ -47,10 +47,13 @@ public class EASY_0108_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE_TEST
     
     
     public static void testGetResult() {
-    	int[] data = new int[] {-10, -3, 0, 5, 9};
+    	
+    	int[] data = new int[] {0, 1, 2, 3, 4, 5};
     	
     	Assert.assertNotNull( EASY_0108_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.sortedArrayToBST(data));
+    	data = new int[] {-10, -3, 0, 5, 9};
     	
+    	Assert.assertNotNull( EASY_0108_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE.sortedArrayToBST(data));
     	
     	
     	

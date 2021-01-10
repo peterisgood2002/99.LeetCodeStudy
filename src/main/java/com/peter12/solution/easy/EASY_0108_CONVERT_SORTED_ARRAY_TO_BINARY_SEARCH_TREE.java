@@ -4,100 +4,34 @@ import com.peter12.solution.data.TreeNode;
 
 public class EASY_0108_CONVERT_SORTED_ARRAY_TO_BINARY_SEARCH_TREE {
 	public static TreeNode sortedArrayToBST(int[] nums) {
+		/*
+		 * Because the array is sorted, we divide and conquer.
+		 * See the Link: https://zxi.mytechroad.com/blog/tree/leetcode-108-convert-sorted-array-to-binary-search-tree/
+		 * 
+		 * */
 		
-		if( nums.length == 0 ) {
+		TreeNode result = buildBST(0, nums.length - 1, nums);
+		
+		return result;
+		
+	}
+	
+	public static TreeNode buildBST(int begin, int end, int[] data) {
+		
+		if( begin > end ) {
 			return null;
 		}
+		//Find the middle of the array as the root
+		int middle = ( begin + end ) / 2;
 		
-		TreeNode root = new TreeNode( nums[0] );
-	
-		int i = 1;
-		while( i < nums.length ) {
-			TreeNode newNode = new TreeNode( nums[i] );
-			
-			//1. Add node
-			
-			root = insertNode(root, newNode);
-			
-	
-			
-			i++;
-		}
+		TreeNode root = new TreeNode(data[middle]);
+		
+		root.left = buildBST(begin, middle - 1, data);
+		root.right = buildBST(middle + 1, end, data);
 		
 		return root;
-	}
-	
-	public static TreeNode insertNode(TreeNode root, TreeNode node) {
-		
-		
-		boolean moveRight = root.val < node.val;
-		
-		TreeNode current = root;
-		TreeNode next = moveRight? current.right: current.left;
-		
-		while ( next != null ) {
-			current = next; 
-			next = moveRight? current.right: current.left;
-		}
-		
-		if ( moveRight) {
-			current.right = node;
-		} else {
-			current.left = node;
-		}
-		
-		root = balance(root);
-		return root;
 		
 	}
 	
-	public static TreeNode balance( TreeNode root ) {
-		int balance = isBlanace(root);
-		if( -1 <= balance && balance <= 1 ) {
-			return root;//Balance
-		}
-		
-		//Does not balance at all
-		TreeNode moveNode = root;
-		
-		if(balance > 1) {
-			//The depth of Left Tree is bigger than Right Tree
-			root = root.left;
-			moveNode.left = null;
-			insertNode(root, moveNode);
-						
-		} else {
-			root = root.right;
-			moveNode.right = null;
-			insertNode(root, moveNode);
-			
-					
-		}
-		
-		return root;
-	}
 	
-	public static int isBlanace( TreeNode root ) {
-		
-		int leftLevel = level(root.left);
-		int rightLevel = level( root.right);
-		
-		return leftLevel - rightLevel;
-	
-	}
-	
-	public static int level( TreeNode root) {
-		if( root == null ) {
-			return 0;
-		}
-		
-		int leftLevel = level( root.left );
-		int rightLevel = level( root.right );
-		
-		if( leftLevel < rightLevel ) {
-			return rightLevel + 1;
-		} else {
-			return leftLevel + 1;
-		}
-	}
 }
