@@ -66,6 +66,21 @@ We also note the progress and experiences daily.
         </p>
     </th>
   </tr>
+  <tr>
+    <th>2020110</th>
+    <th>Easy</th>
+    <th>60</th>
+    <th>31</th>
+    <th>
+		<p>
+          <ol>
+             <li>The issue about dyanmic programming is difficult because we should define optimal value function
+			 </li>
+			 
+          </ol>
+        </p>
+    </th>
+  </tr>
   
 </table>
 
