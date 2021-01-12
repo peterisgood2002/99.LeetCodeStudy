@@ -9,7 +9,16 @@ public class EASY_0110_BALANCED_BINARY_TREE {
 			return true;
 		}
 		
-
+		if( root.left != null && root.right != null ) {
+			if(  !isBalanced( root.left ) || !isBalanced(root.right) ) {
+				return false;
+			}
+		}
+		
+		if(root.val == 1 ) {
+			int i = 0;
+		}
+		//Left or Right is empty
 		int leftLevel = level(root.left);
 		int rightLevel = level( root.right);
 		
