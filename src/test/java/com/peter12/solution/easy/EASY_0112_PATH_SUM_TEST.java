@@ -52,9 +52,9 @@ public class EASY_0112_PATH_SUM_TEST
     	
     	TreeNode tree = TreeNodeData.createTree4();
     	
-    	Assert.assertFalse(EASY_0112_PATH_SUM.hasPathSum(tree, 21) );
-    	
     	Assert.assertTrue(EASY_0112_PATH_SUM.hasPathSum(tree, 22) );
+    	
+    	Assert.assertFalse(EASY_0112_PATH_SUM.hasPathSum(tree, 21) );
     	
     	
     	

@@ -5,25 +5,21 @@ import com.peter12.solution.data.TreeNode;
 public class EASY_0112_PATH_SUM {
 	public static boolean hasPathSum(TreeNode root, int sum) {
 		if( root == null ) {
-			if( sum == 0 ) {
-				return true;
-			} else {
-				return false;
-			}
+			return false;
 			
 		}
 		
 		int diff = sum - root.val;
+		if( root.left == null && root.right == null ) {
+			return diff == 0;
+		}
+		
+		
 		
 		boolean inLeft = hasPathSum(root.left, diff);
 		
-		boolean inRight = hasPathSum(root.right, diff);;
+		boolean inRight = hasPathSum(root.right, diff);
 		
-		
-		if( inLeft || inRight ) {
-			return true;
-		} else {
-			return false;
-		}
+		return  inLeft || inRight;
 	}
 }
