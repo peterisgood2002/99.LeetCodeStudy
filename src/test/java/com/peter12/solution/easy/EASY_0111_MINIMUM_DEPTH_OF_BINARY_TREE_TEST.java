@@ -50,9 +50,15 @@ public class EASY_0111_MINIMUM_DEPTH_OF_BINARY_TREE_TEST
     public static void testGetResult() {
     	
     	
-    	TreeNode tree = TreeNodeData.createTree();
+    	TreeNode tree = TreeNodeData.createTree3();
+    	
+    	Assert.assertEquals( 5, EASY_0111_MINIMUM_DEPTH_OF_BINARY_TREE.minDepth(tree));
+    	
+    	tree = TreeNodeData.createTree();
     	
     	Assert.assertEquals( 2, EASY_0111_MINIMUM_DEPTH_OF_BINARY_TREE.minDepth(tree));
+    	
+    	
     	
     }
   

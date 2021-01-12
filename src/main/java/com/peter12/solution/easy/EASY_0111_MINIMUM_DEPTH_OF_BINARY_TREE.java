@@ -8,8 +8,19 @@ public class EASY_0111_MINIMUM_DEPTH_OF_BINARY_TREE {
 			return 0;
 		}
 		
+		if( root.left == null ) {
+			return minDepth(root.right) + 1;
+			
+		}
+		
+		if( root.right == null ) {
+			return minDepth(root.left) + 1;
+		}
+		
 		int leftMinDepth = minDepth(root.left);
 		int rightMinDepth = minDepth( root.right);
+	
+		
 		
 		if( leftMinDepth < rightMinDepth ) {
 			return leftMinDepth + 1;

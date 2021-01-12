@@ -25,4 +25,16 @@ public class TreeNodeData {
 		
 		return result;
 	}
+	
+	public static TreeNode createTree3() {
+		TreeNode result = new TreeNode(2);
+		result.right = new TreeNode(3);
+		
+		
+		result.right.right = new TreeNode(4);
+		result.right.right.right = new TreeNode(5);
+		result.right.right.right.right = new TreeNode(6);
+		
+		return result;
+	}
 }
