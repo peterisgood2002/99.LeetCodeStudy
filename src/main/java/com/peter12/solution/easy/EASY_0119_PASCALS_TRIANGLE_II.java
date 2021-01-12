@@ -7,9 +7,9 @@ public class EASY_0119_PASCALS_TRIANGLE_II {
 	public static List<Integer> getRow(int rowIndex) {
 
 		List<Integer> result = new Vector<Integer>();
-		
+	
 		for( int i = 0; i < rowIndex + 1; i++ ) {
-			int c = (int)C(rowIndex, i);
+			int c = (int)Math.round( C(rowIndex, i) );
 			
 			result.add(c);
 		}
