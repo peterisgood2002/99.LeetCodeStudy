@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import com.peter12.solution.data.ListNode;
 import com.peter12.solution.data.TreeNode;
+import com.peter12.solution.data.TreeNodeData;
 import com.peter12.solution.easy.EASY_0020_VALID_PARENTHESES;
 import com.peter12.solution.util.Util;
 
@@ -48,7 +49,7 @@ public class EASY_0107_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II_TEST
     
     public static void testGetResult() {
     	
-    	TreeNode tree = createTree();
+    	TreeNode tree = TreeNodeData.createTree();
     	List<List<Integer>> ans = createAnswer();
     	
     	Assert.assertTrue( Util.equalsForList(ans, EASY_0107_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.levelOrderBottom(tree) )  );
@@ -62,16 +63,7 @@ public class EASY_0107_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II_TEST
     	
     }
   
-    public static TreeNode createTree() {
-    	TreeNode result = new TreeNode(3);
-    	result.left = new TreeNode(9);
-    	
-    	result.right = new TreeNode(20);
-    	result.right.left = new TreeNode(15);
-    	result.right.right = new TreeNode(7);
-    	
-    	return result;
-    }
+    
     
     public static List<List<Integer>> createAnswer() {
     	List<List<Integer>> result = new Vector<List<Integer>>();
