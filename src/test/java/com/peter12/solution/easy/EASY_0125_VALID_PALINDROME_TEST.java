@@ -49,8 +49,9 @@ public class EASY_0125_VALID_PALINDROME_TEST
     
     public static void testGetResult() {
     	String data = "a man, a plan, a canal: Panama";
-    	Assert.assertFalse( EASY_0125_VALID_PALINDROME.isPalindrome("0P") );
     	Assert.assertTrue( EASY_0125_VALID_PALINDROME.isPalindrome(",") );
+    	Assert.assertFalse( EASY_0125_VALID_PALINDROME.isPalindrome("0P") );
+    	
     	Assert.assertTrue( EASY_0125_VALID_PALINDROME.isPalindrome(data) );
     	
     	Assert.assertFalse( EASY_0125_VALID_PALINDROME.isPalindrome("race a car") );
