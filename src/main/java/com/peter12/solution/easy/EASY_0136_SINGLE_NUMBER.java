@@ -5,23 +5,16 @@ import java.util.HashMap;
 public class EASY_0136_SINGLE_NUMBER {
 	public static int singleNumber(int[] nums) {
 		
+		/*
+		 * Solution: Bit Manipulation A XOR 0 = A
+		 * A XOR B XOR A = A XOR A XOR B = 0 XOR B = b
+		 * */
 		
-		HashMap<Integer, Integer> count = new HashMap<Integer, Integer>();
-		
-	
-		for( int i = 0; i < nums.length; i++ ) {
-			Integer c = count.remove( nums[i] );
-			if( c == null ) {
-				count.put( nums[i], nums[i]);
-			}
-		}
 		int result = 0;
-		
-		if( count.size() > 0 ) {
-			for( Integer r: count.keySet()) {
-				return r;
-			}
+		for(int i : nums ) {
+			result ^= i ;
 		}
+		
 		return result;
 	}
 }
