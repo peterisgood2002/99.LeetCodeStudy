@@ -90,6 +90,15 @@ We also note the progress and experiences daily.
 		
     </th>
   </tr>
+  <tr>
+    <th>2020110</th>
+    <th>Easy</th>
+    <th>84</th>
+    <th>40</th>
+    <th>
+		
+    </th>
+  </tr>
   
 </table>
 
