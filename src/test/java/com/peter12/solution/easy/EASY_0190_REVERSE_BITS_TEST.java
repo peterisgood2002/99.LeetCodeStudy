@@ -50,6 +50,7 @@ public class EASY_0190_REVERSE_BITS_TEST
     
     public static void testGetResult() {
     	
+    	Assert.assertEquals(-1073741825, EASY_0190_REVERSE_BITS.reverseBits(-3));
     	Assert.assertEquals(964176192, EASY_0190_REVERSE_BITS.reverseBits(43261596));
     	
     }

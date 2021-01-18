@@ -5,10 +5,11 @@ public class EASY_0190_REVERSE_BITS {
 		
 		int result = 0;
 		int pow = 31;
-		while( n > 0 ) {
+		
+		while( n != 0 && pow >= 0) {
 			result +=( n & 1) << pow;
 			 n = n >> 1;
-			pow -= 1;
+			pow--;
 		}
 		
 		return result;
