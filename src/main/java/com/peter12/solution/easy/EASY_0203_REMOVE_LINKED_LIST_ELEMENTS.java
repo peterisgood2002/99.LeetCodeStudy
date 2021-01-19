@@ -14,7 +14,7 @@ public class EASY_0203_REMOVE_LINKED_LIST_ELEMENTS {
 				current = current.next;
 				
 			} else {
-				if( current == head ) {
+				if( current == result ) {
 					result = current.next;
 					current = current.next;
 					
