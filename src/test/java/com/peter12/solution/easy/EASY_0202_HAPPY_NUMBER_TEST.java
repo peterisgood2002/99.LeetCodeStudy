@@ -49,7 +49,8 @@ public class EASY_0202_HAPPY_NUMBER_TEST
     
     
     public static void testGetResult() {
-    	
+    	Assert.assertFalse( EASY_0202_HAPPY_NUMBER.isHappy(2));
+    	Assert.assertTrue( EASY_0202_HAPPY_NUMBER.isHappy(7));
     	Assert.assertTrue( EASY_0202_HAPPY_NUMBER.isHappy(19));
     }
     
