@@ -50,9 +50,13 @@ public class EASY_0205_ISOMORPHIC_STRINGS_TEST
     
     public static void testGetResult() {
     	
-    	Assert.assertTrue( EASY_0205_ISOMORPHIC_STRINGS.isIsomorphic("egg", "add" ) );
     	Assert.assertFalse( EASY_0205_ISOMORPHIC_STRINGS.isIsomorphic("foo", "bar" ) );
     	Assert.assertTrue( EASY_0205_ISOMORPHIC_STRINGS.isIsomorphic("paper", "title" ) );
+    	Assert.assertFalse( EASY_0205_ISOMORPHIC_STRINGS.isIsomorphic("badc", "baba" ) );
+    	Assert.assertFalse( EASY_0205_ISOMORPHIC_STRINGS.isIsomorphic("bbbaaaba", "aaabbbba" ) );
+    	Assert.assertTrue( EASY_0205_ISOMORPHIC_STRINGS.isIsomorphic("egg", "add" ) );
+    	
+    	
     	
     }
     

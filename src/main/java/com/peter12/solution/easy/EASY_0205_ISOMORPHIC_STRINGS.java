@@ -7,55 +7,41 @@ import java.util.Vector;
 
 public class EASY_0205_ISOMORPHIC_STRINGS {
 	public static boolean isIsomorphic(String s, String t) {
-		HashMap<String, Integer> cs = countCharacter(s);
-		HashMap<String, Integer> ct = countCharacter(t);
+		/**
+		 * Solution: https://www.geeksforgeeks.org/check-if-two-given-strings-are-isomorphic-to-each-other/
+		 */
+		int i = 0;
+		int j = 0;
 		
-		HashMap<Integer, List<String>> revertCt = new HashMap<Integer, List<String>>();
-		
-		for( Entry<String, Integer> entry : ct.entrySet()) {
-			int count = entry.getValue();
-			List<String> d = revertCt.get( count );
-			if( d == null ) {
-				d = new Vector<String>();
-				revertCt.put(count, d);
+		HashMap<String, String> replace = new HashMap<String, String>();
+		List<String> visitS = new Vector<String>();
+		while ( i == j && i < s.length() ) {
+			String chS = s.substring( i, i + 1 );
+			String chT = t.substring( j, j + 1 );
+			
+			String r = replace.get(chT);
+			
+			if( r == null ) {
+				if( visitS.contains(chS) ) {
+					return false;
+				}
+				
+				r = chS;
+				replace.put(chT, r);
 			}
-			
-			d.add( entry.getKey() );
-		}
-		
-		for( Entry<String, Integer> entry : cs.entrySet()) {
-			int count = entry.getValue();
-			
-			List<String> replaceC = revertCt.get(count);
-			if( replaceC == null || replaceC.size() == 0) {
+			if( !r.equals(chS) ) {
 				return false;
 			}
 			
-			replaceC.remove(0);
-			
+			visitS.add(chS);
+			i++; j++;
 		}
-		
+
+
 		return true;
 	}
+
 	
-	public static HashMap<String, Integer> countCharacter(String s ) {
-		
-		HashMap<String, Integer> result = new HashMap<String, Integer>();
-		for( int i = 0; i < s.length(); i++ )  {
-			String c = s.substring(i,  i + 1);
-			
-			Integer count = result.get(c);
-			
-			if( count == null ) {
-				count = 1;
-			} else {
-				count++;
-			}
-			
-			result.put(c, count);
-			
-		}
-		
-		return result;
-	}
+
+
 }
