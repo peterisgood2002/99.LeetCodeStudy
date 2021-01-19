@@ -46,9 +46,7 @@ We also note the progress and experiences daily.
     <th>Easy</th>
     <th>36</th>
     <th>17</th>
-    <th>
-      
-    </th>
+    <th></th>
   </tr>
   <tr>
     <th>2020110</th>
@@ -60,8 +58,7 @@ We also note the progress and experiences daily.
           <ol>
              <li>It's clear that separate the result from the algorithm. We should perform algorithm and then save the result.
 			     If our algoruthm is interwoven with result, it is so difficult to debug and find out the solution
-			 </li>
-			 
+			 </li>	 
           </ol>
         </p>
     </th>
@@ -75,8 +72,7 @@ We also note the progress and experiences daily.
 		<p>
           <ol>
              <li>The issue about dyanmic programming is difficult because we should define optimal value function
-			 </li>
-			 
+			 </li>	 
           </ol>
         </p>
     </th>
@@ -86,28 +82,30 @@ We also note the progress and experiences daily.
     <th>Easy</th>
     <th>72</th>
     <th>33</th>
-    <th>
-		
-    </th>
+    <th></th>
   </tr>
   <tr>
     <th>2020114</th>
     <th>Easy</th>
     <th>84</th>
     <th>40</th>
-    <th>
-		
-    </th>
+    <th></th>
   </tr>
    <tr>
     <th>2020118</th>
     <th>Easy</th>
     <th>120</th>
     <th>52</th>
-    <th>
-		
-    </th>
+    <th></th>
   </tr>
+   <tr>
+    <th>2020119</th>
+    <th>Easy</th>
+    <th>120</th>
+    <th>57</th>
+    <th></th>
+  </tr>
+  
   
 </table>
 
