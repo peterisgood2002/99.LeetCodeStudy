@@ -50,9 +50,22 @@ public class EASY_0234_PALINDROME_LINKED_LIST_TEST
     
     public static void testGetResult() {
     	
-    	int[] nums = new int[] {1, 2, 2 ,1 };
+    	int[] nums = new int[] {1, 2, 5, 2 ,1 };
     	ListNode data = ListNode.getLinkList( nums);
+    	Assert.assertTrue( EASY_0234_PALINDROME_LINKED_LIST.isPalindrome(data) );
     	
+    	nums = new int[] {1, 0 , 1 };
+    	data = ListNode.getLinkList( nums);
+    	Assert.assertTrue( EASY_0234_PALINDROME_LINKED_LIST.isPalindrome(data) );
+    	
+    	
+    	
+    	nums = new int[] {1 };
+    	data = ListNode.getLinkList( nums);
+    	Assert.assertTrue( EASY_0234_PALINDROME_LINKED_LIST.isPalindrome(data) );
+    	
+    	nums = new int[] {1, 2, 2 ,1 };
+    	data = ListNode.getLinkList( nums);
     	Assert.assertTrue( EASY_0234_PALINDROME_LINKED_LIST.isPalindrome(data) );
     	
     	nums = new int[] {1, 2 };
