@@ -1,22 +1,29 @@
 package com.peter12.solution.easy;
 
+import java.util.HashMap;
+
 public class EASY_0219_CONTAINS_DUPLICATE_II {
 	public static boolean containsNearbyDuplicate(int[] nums, int k) {
-		int turtle = 0;
-		int rabbit = 0;
+		/*
+		 * Solution:
+		 * https://www.programcreek.com/2014/05/leetcode-contains-duplicate-ii-java/
+		 * */
 		
+		if( nums.length == 0 ) {
+			return false;
+		}
 		
-		do {
-			turtle = ( turtle + 1 ) % nums.length;
-			rabbit = ( rabbit + 2 ) % nums.length;
-		} while( nums[turtle] != nums[rabbit]);
-		
-		
-		for( int i = turtle + 1; i < nums.length; i++ ) {
-			if( nums[turtle] == nums[i] ) {
-				int length = i - turtle;
-				return length == k;
+		HashMap<Integer, Integer> index = new HashMap<Integer, Integer>();
+		for( int i = 0; i < nums.length; i++ ) {
+			Integer val = index.get( nums[i] );
+			
+			if( val != null ) {
+				if( i - val <= k ) {
+					return true;
+				};
 			}
+			
+			index.put( nums[i],  i);
 		}
 		
 		return false;

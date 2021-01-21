@@ -50,15 +50,22 @@ public class EASY_0219_CONTAINS_DUPLICATE_II_TEST
     
     public static void testGetResult() {
     	
-    	int[] nums1 = new int[] { 1, 2, 3, 1 };
+    	
+    	int[] nums1 = new int[] { 1, 0, 1, 1};
+    	Assert.assertTrue( EASY_0219_CONTAINS_DUPLICATE_II.containsNearbyDuplicate(nums1, 1));
+    	
+    	nums1 = new int[] { -1, -1 };
+    	
+    	Assert.assertTrue( EASY_0219_CONTAINS_DUPLICATE_II.containsNearbyDuplicate(nums1, 1));
+    	
+    	nums1 = new int[] { 1, 2, 3, 1 };
     	
     	Assert.assertTrue( EASY_0219_CONTAINS_DUPLICATE_II.containsNearbyDuplicate(nums1, 3));
     	
     	nums1 = new int[] { 1, 2, 3, 1, 2, 3 };
     	Assert.assertFalse( EASY_0219_CONTAINS_DUPLICATE_II.containsNearbyDuplicate(nums1, 2));
     	
-    	nums1 = new int[] { 1, 0, 1, 1};
-    	Assert.assertTrue( EASY_0219_CONTAINS_DUPLICATE_II.containsNearbyDuplicate(nums1, 1));
+    	
     	
     }
     
