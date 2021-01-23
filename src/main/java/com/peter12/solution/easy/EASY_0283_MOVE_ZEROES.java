@@ -9,8 +9,9 @@ public class EASY_0283_MOVE_ZEROES {
 		for( int i = 0; i < nums.length; i++) {
 			if( nums[i] != 0 ) {
 				//1. Swap nums[i] and nums[zeroIndex]
+				int tmp = nums[zeroIndex];
 				nums[zeroIndex] = nums[i];
-				nums[i] = 0;
+				nums[i] = tmp;
 				
 				//2. Incremental zeroIndex
 				zeroIndex++;

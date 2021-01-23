@@ -50,8 +50,18 @@ public class EASY_0283_MOVE_ZEROES_TEST
     
     public static void testGetResult() {
 
-    	int [] nums = new int[] {0, 1, 0, 3, 12 };
-    	int [] ans = new int[] {1, 3, 12, 0, 0 };
+    	int [] nums = new int[] {1 };
+    	int [] ans = new int[] {1 };
+    	
+    	EASY_0283_MOVE_ZEROES.moveZeroes(nums);
+    	
+    	for( int i = 0; i < nums.length; i++ ) {
+    		Assert.assertEquals(ans[i], nums[i]);
+    	}
+    	
+    	
+    	nums = new int[] {0, 1, 0, 3, 12 };
+    	ans = new int[] {1, 3, 12, 0, 0 };
     	
     	EASY_0283_MOVE_ZEROES.moveZeroes(nums);
     	
