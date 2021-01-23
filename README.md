@@ -112,6 +112,20 @@ We also note the progress and experiences daily.
     <th>66</th>
     <th></th>
   </tr>
+  <tr>
+    <th>2020123</th>
+    <th>Easy</th>
+    <th>120</th>
+    <th>87</th>
+    <th>
+		<p>
+          <ol>
+             <li>Before jumping to solution, you should try enough example if the algorithm is difficult to figure out.
+			 </li>	 
+          </ol>
+        </p>
+    </th>
+  </tr>
   
   
 </table>
