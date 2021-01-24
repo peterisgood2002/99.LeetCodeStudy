@@ -21,22 +21,17 @@ public class EASY_0374_GUESS_NUMBER_HIGHER_OR_LOWER {
 			
 			if( g == 1) {
 				
-				if( i == middle) {
-					return (int)j;
-				}
-				i = middle;
+				i = middle + 1;
 			}
 			
 			if( g == -1 ) {
-				if( j == middle) {
-					return (int)i;
-				}
-				j = middle;
+				
+				j = middle - 1;
 			}
 			
-		} while( i < j ) ;
+		} while( i <= j ) ;
 		
-		return middle;
+		return (int)i;
 	}
 	
 	public static int guess( int num ) {

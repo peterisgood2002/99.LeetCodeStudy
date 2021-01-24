@@ -50,6 +50,10 @@ public class EASY_0278_FIRST_BAD_VERSION_TEST
     
     public static void testGetResult() {
 
+    	EASY_0278_FIRST_BAD_VERSION.badVersion = 2;
+    	Assert.assertEquals(EASY_0278_FIRST_BAD_VERSION.badVersion, EASY_0278_FIRST_BAD_VERSION.firstBadVersion(3) );
+    	
+    	
     	EASY_0278_FIRST_BAD_VERSION.badVersion = 1702766719;
     	Assert.assertEquals(EASY_0278_FIRST_BAD_VERSION.badVersion, EASY_0278_FIRST_BAD_VERSION.firstBadVersion(2126753390) );
     	
