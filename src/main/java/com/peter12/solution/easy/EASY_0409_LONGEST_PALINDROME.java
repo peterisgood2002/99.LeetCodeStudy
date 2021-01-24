@@ -11,27 +11,20 @@ public class EASY_0409_LONGEST_PALINDROME {
 		HashMap<String, Integer> count = Util.groupByCharacter(s);	
 		
 		int result = 0;
-		int maxPrime = 0;
 		
 		for(Entry<String, Integer> e :count.entrySet() ) {
 			Integer c = e.getValue();
 			
+			result += c / 2 * 2; //Add Even Character
 			
-			if( c % 2 == 0 ) {
-				//This character can be one character in the longest palindrome.
-				result += c; 
-			} else {
-				if( maxPrime < c ) {
-					//We can add the character which count is odd and maximum. 
-					maxPrime = c;
-				}
+			if( result % 2 == 0 && c % 2 == 1 ) {
+				//We have a character which count is odd
+				result++;
 			}
-			
 			
 			
 		}
 		
-		result += maxPrime;
 		
 		return result;
 		
