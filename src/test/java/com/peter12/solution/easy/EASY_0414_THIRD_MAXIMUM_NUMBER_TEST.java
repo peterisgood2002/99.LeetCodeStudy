@@ -52,7 +52,7 @@ public class EASY_0414_THIRD_MAXIMUM_NUMBER_TEST
     
     	
     	int[] nums = new int[] {1,2,-2147483648};
-    	Assert.assertEquals(1, EASY_0414_THIRD_MAXIMUM_NUMBER.thirdMax(nums));
+    	Assert.assertEquals(-2147483648, EASY_0414_THIRD_MAXIMUM_NUMBER.thirdMax(nums));
     	
     	nums = new int[] {2, 2, 3 ,1};
     	Assert.assertEquals(1, EASY_0414_THIRD_MAXIMUM_NUMBER.thirdMax(nums));
