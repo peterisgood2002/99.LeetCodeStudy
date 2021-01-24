@@ -1,5 +1,6 @@
 package com.peter12.solution.util;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Util {
@@ -44,5 +45,22 @@ public class Util {
 		}
 		
 		return true;
+	}
+	
+	public static HashMap<String, Integer> groupByCharacter(String s) {
+		HashMap<String, Integer> count = new HashMap<String, Integer>();
+		
+		for( int i = 0; i < s.length(); i++ ) {
+			String ch = s.substring(i, i+1);
+			Integer c = count.get(ch);
+			
+			if( c == null ) {
+				c = 0;
+			}
+			
+			count.put(ch, ++c);
+		}
+		
+		return count;
 	}
 }

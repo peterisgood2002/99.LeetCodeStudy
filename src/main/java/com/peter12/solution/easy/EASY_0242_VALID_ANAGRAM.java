@@ -2,19 +2,13 @@ package com.peter12.solution.easy;
 
 import java.util.HashMap;
 
+import com.peter12.solution.util.Util;
+
 public class EASY_0242_VALID_ANAGRAM {
 	public static boolean isAnagram(String s, String t) {
 		
-		HashMap<String, Integer> countS = new HashMap<String, Integer> ();
-		for( int i = 0; i < s.length(); i++ ) {
-			String ch = s.substring(i, i + 1);
-			Integer c = countS.get(ch);
-			if( c == null ) {
-				c = 0;
-			}
+		HashMap<String, Integer> countS = Util.groupByCharacter(s);
 			
-			countS.put(ch, ++c);
-		}
 		
 		for( int i = 0; i < t.length(); i++  ) {
 			String ch = t.substring(i, i + 1 );
