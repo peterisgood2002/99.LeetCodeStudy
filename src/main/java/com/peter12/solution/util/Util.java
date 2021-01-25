@@ -63,4 +63,14 @@ public class Util {
 		
 		return count;
 	}
+	
+	public static void reverse(int begin, int end, char[] s) {
+		int middle = (begin + end) / 2;
+		
+		for( int i = begin, j = end - 1; i < middle; i++, j--) {
+			char tmp = s[i];
+			s[i] = s[j];
+			s[j] = tmp;
+		}
+	}
 }
