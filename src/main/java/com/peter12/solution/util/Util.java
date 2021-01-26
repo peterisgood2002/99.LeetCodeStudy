@@ -1,7 +1,9 @@
 package com.peter12.solution.util;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Util {
 	public static boolean equalsForArray(int[] a, int[] b ) {
@@ -72,5 +74,21 @@ public class Util {
 			s[i] = s[j];
 			s[j] = tmp;
 		}
+	}
+	
+	public static Set<Integer> getDivisor(int num) {
+		int size = num / 2;
+		
+		Set<Integer> result  = new HashSet<Integer>();
+		for( int i = 1; i <= size; i++ ) {
+			if( num % i == 0 ) {
+				result.add(i);
+				
+				result.add( num / i);
+				
+			}
+		}
+		
+		return result;
 	}
 }
