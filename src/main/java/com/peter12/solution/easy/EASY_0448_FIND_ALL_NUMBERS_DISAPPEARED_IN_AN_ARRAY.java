@@ -27,31 +27,39 @@ public class EASY_0448_FIND_ALL_NUMBERS_DISAPPEARED_IN_AN_ARRAY {
 		 *    nums     3, 2, 3, 4, 1, 2, 7, 8
 		 *    diff     3, 2, 3, 4, -4
 		 * */
-		
-		List<Integer> result = new Vector<Integer>();
-		
+
+
+
 		int index = 1;
 		int i = 0;
 		while( i < nums.length ) {
 			int diff = nums[i] - index;
-			if( diff > 0 && nums[i] != nums[ i + diff ]) {
-				//SWAP nums[i + diff] and nums[i]
-				int tmp = nums[i];
-				nums[i] = nums[ i + diff ];
-				nums[ i + diff ] = tmp;
-			} else 	{
-				if( diff < 0 ) {
-					result.add(index);
-				}
-				
+
+			if( diff == 0 || nums[i] == nums[ i + diff ] ) {
 				index++;
 				i++;
+				continue;
 			}
-		
+
+
+
+			//SWAP nums[i + diff] and nums[i]
+			int tmp = nums[i];
+			nums[i] = nums[ i + diff ];
+			nums[ i + diff ] = tmp;
+
+
 		}
-		
-		
+
+		List<Integer> result = new Vector<Integer>();
+
+		for( i = 0; i < nums.length; i++ ) {
+			if( nums[i] != i+1) {
+				result.add(i+ 1);
+			}
+		}
+
 		return result;
-		
+
 	}
 }
