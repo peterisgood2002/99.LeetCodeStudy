@@ -49,7 +49,11 @@ extends TestCase
 
 	public static void testGetResult() {
 		
+		
+		Assert.assertEquals("AB", MEDIUM_0006_ZIGZAG_CONVERSION.convert("AB", 1));
 		Assert.assertEquals("PAHNAPLSIIGYIR", MEDIUM_0006_ZIGZAG_CONVERSION.convert("PAYPALISHIRING", 3));
+		Assert.assertEquals("A", MEDIUM_0006_ZIGZAG_CONVERSION.convert("A", 1));
+		
 		
 		Assert.assertEquals("PINALSIGYAHRPI", MEDIUM_0006_ZIGZAG_CONVERSION.convert("PAYPALISHIRING", 4));
 	}
