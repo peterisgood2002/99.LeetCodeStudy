@@ -15,9 +15,16 @@ We also note the progress and experiences daily.
     <th>Lesson Learn</th>
   </tr>
   <tr>
-    <th>2020107</th>
+    <th>2020105</th>
     <th>Easy</th>
     <th>12</th>
+    <th>0</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020107</th>
+    <th>Easy</th>
+    <th>24</th>
     <th>1</th>
     <th>
         <p>
@@ -31,7 +38,7 @@ We also note the progress and experiences daily.
   <tr>
     <th>2020108</th>
     <th>Easy</th>
-    <th>24</th>
+    <th>36</th>
     <th>6</th>
     <th>
         <p>
@@ -44,14 +51,14 @@ We also note the progress and experiences daily.
   <tr>
     <th>2020109</th>
     <th>Easy</th>
-    <th>36</th>
+    <th>48</th>
     <th>17</th>
     <th></th>
   </tr>
   <tr>
     <th>2020110</th>
     <th>Easy</th>
-    <th>48</th>
+    <th>60</th>
     <th>25</th>
     <th>
 		<p>
@@ -64,9 +71,16 @@ We also note the progress and experiences daily.
     </th>
   </tr>
   <tr>
+    <th>2020111</th>
+    <th>Easy</th>
+    <th>72</th>
+    <th>25</th>
+    <th></th>
+  </tr>
+  <tr>
     <th>2020112</th>
     <th>Easy</th>
-    <th>60</th>
+    <th>84</th>
     <th>31</th>
     <th>
 		<p>
@@ -80,42 +94,77 @@ We also note the progress and experiences daily.
   <tr>
     <th>2020113</th>
     <th>Easy</th>
-    <th>72</th>
+    <th>96</th>
     <th>33</th>
     <th></th>
   </tr>
   <tr>
     <th>2020114</th>
     <th>Easy</th>
-    <th>84</th>
+    <th>108</th>
+    <th>40</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020115</th>
+    <th>Easy</th>
+    <th>120</th>
+    <th>40</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020116</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>12</th>
+    <th>40</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020117</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>24</th>
     <th>40</th>
     <th></th>
   </tr>
    <tr>
     <th>2020118</th>
     <th>Easy</th>
-    <th>120</th>
-    <th>52</th>
+    <th>120</BR>Medium</th>
+    <th>52</BR>36</th>
     <th></th>
   </tr>
    <tr>
     <th>2020119</th>
-    <th>Easy</th>
-    <th>120</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>48</th>
+    <th>57</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020120</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>60</th>
     <th>57</th>
     <th></th>
   </tr>
    <tr>
     <th>2020121</th>
-    <th>Easy</th>
-    <th>120</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>72</th>
+    <th>66</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020122</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>84</th>
     <th>66</th>
     <th></th>
   </tr>
   <tr>
     <th>2020123</th>
-    <th>Easy</th>
-    <th>120</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>96</th>
     <th>87</th>
     <th>
 		<p>
@@ -128,22 +177,50 @@ We also note the progress and experiences daily.
   </tr>
   <tr>
     <th>2020124</th>
-    <th>Easy</th>
-    <th>120</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>108</th>
     <th>97</th>
     <th></th>
   </tr>
   <tr>
     <th>2020125</th>
-    <th>Easy</th>
-    <th>120</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>120</th>
     <th>113</th>
     <th></th>
   </tr>
   <tr>
-    <th>2020125</th>
-    <th>Easy</th>
-    <th>120</th>
+    <th>2020126</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>132</th>
+    <th>119</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020127</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>144</th>
+    <th>119</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020128</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>156</th>
+    <th>119</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020129</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>168</th>
+    <th>119</th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>2020130</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>180</th>
     <th>119</th>
     <th></th>
   </tr>
