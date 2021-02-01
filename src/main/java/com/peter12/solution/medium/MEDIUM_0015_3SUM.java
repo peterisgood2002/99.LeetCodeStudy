@@ -51,6 +51,7 @@ public class MEDIUM_0015_3SUM {
 					
 					j++;
 					
+					//Prevent from duplication
 					while( j < k && nums[j] == nums[j-1]) {
 						j++;
 					}
