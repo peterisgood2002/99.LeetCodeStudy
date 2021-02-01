@@ -30,7 +30,7 @@ public class MEDIUM_0017_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER {
 	
 	public static List<String> digitToString( String digit ) {
 		int val = Integer.parseInt(digit);
-		char ch = (char) ('a' + (val - 2) * 3);
+		char ch = getFirstCharacter(val);
 		
 		List<String> result = new Vector<String>();
 		
@@ -38,6 +38,30 @@ public class MEDIUM_0017_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER {
 		result.add(String.valueOf( (char)(ch+1) ));
 		result.add(String.valueOf( (char)(ch+2) ));
 		
+		if(val == 7 || val == 9 ) {
+			result.add(String.valueOf((char)(ch+3)));
+		}
+		
 		return result;
+	}
+	
+	public static char getFirstCharacter( int val ) {
+		if( val <= 6) {
+			return (char) ('a' + (val - 2) * 3);
+		}
+		
+		if( val == 7 ) {
+			return 'p';
+		}
+		
+		if( val == 8 ) {
+			return 't';
+		}
+		
+		if( val == 9 ) {
+			return 'w';
+		}
+		
+		return 'a';
 	}
 }

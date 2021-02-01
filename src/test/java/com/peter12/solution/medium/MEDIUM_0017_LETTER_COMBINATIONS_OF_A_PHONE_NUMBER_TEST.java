@@ -49,7 +49,14 @@ extends TestCase
 
 	public static void testGetResult() {
 
-		List<String> result = MEDIUM_0017_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.letterCombinations("2");
+		List<String> result = MEDIUM_0017_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.letterCombinations("8");
+
+		Assert.assertEquals(3, result.size());
+		result = MEDIUM_0017_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.letterCombinations("7");
+
+		Assert.assertEquals(4, result.size());
+		
+		 result = MEDIUM_0017_LETTER_COMBINATIONS_OF_A_PHONE_NUMBER.letterCombinations("2");
 
 		Assert.assertEquals(3, result.size());
 		
