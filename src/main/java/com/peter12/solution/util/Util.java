@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.Vector;
 
 public class Util {
 	public static boolean equalsForArray(int[] a, int[] b ) {
@@ -90,5 +91,28 @@ public class Util {
 		}
 		
 		return result;
+	}
+	
+	public static void outputResult(int[] nums, List<List<Integer>> result) {
+
+		List<Integer> data = new Vector<Integer>();
+
+		for(Integer v : nums ) {
+			data.add(v);
+
+		}
+
+		if( !result.contains(data ) ) {
+			result.add(data);
+		}
+		
+	}
+
+
+
+	public static void swap( int i, int j, int[] nums ) {
+		int tmp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = tmp;
 	}
 }
