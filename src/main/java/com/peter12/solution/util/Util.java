@@ -94,4 +94,28 @@ public class Util {
 			}
 		}
 	}
+	
+	public static int search( int[] data, int target) {
+		int begin = 0;
+		int end = data.length - 1;
+		
+		while( begin <= end) {
+			double m = ( begin + end ) / 2;
+			int middle = (int) m;
+			
+			if( data[middle] == target ) {
+				return middle;
+			}
+			
+			if( data[middle] > target ) {
+				end = middle - 1;
+			}
+			
+			if( data[middle] < target ) {
+				begin = middle + 1;
+			}
+		}
+		
+		return end;
+	} 
 }
