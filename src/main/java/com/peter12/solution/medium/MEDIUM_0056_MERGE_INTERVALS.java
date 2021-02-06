@@ -3,6 +3,8 @@ package com.peter12.solution.medium;
 import java.util.List;
 import java.util.Vector;
 
+import com.peter12.solution.util.Util;
+
 public class MEDIUM_0056_MERGE_INTERVALS {
 	public static int[][] merge(int[][] intervals) {
 
@@ -10,7 +12,7 @@ public class MEDIUM_0056_MERGE_INTERVALS {
 		 * Solution: https://leetcode.com/problems/merge-intervals/solution/
 		 * */
 		
-		sortedByTheFirstElement(intervals);
+		Util.sortedByTheFirstElement(intervals);
 		
 		List< int[] > result = new Vector< int[] >();
 
@@ -51,23 +53,9 @@ public class MEDIUM_0056_MERGE_INTERVALS {
 		result.add(r);
 		
 		
-		int [][] rtn = new int[ result.size()][];
-		for( int i = 0; i < result.size(); i++ ) {
-			rtn[i] = result.get(i);
-		}
-		return rtn;
+		return Util.outputResult(result);
 	}
 	
-	public static void sortedByTheFirstElement(int[][] intervals ) {
-		for( int i = 0; i < intervals.length; i++ ) {
-			for( int j = i; j < intervals.length; j++ ) {
-				if(intervals[i][0] > intervals[j][0] ) {
-					int[] tmp = intervals[i];
-					intervals[i] = intervals[j];
-					intervals[j] = tmp;
-				}
-			}
-		}
-	}
+	
 
 }

@@ -136,4 +136,24 @@ public class Util {
 		nums[i] = nums[j];
 		nums[j] = tmp;
 	}
+	
+	public static int[][] outputResult( List<int[]> data ) {
+		int [][] result = new int[ data.size()][];
+		for( int i = 0; i < data.size(); i++ ) {
+			result[i] = data.get(i);
+		}
+		return result;
+	}
+	
+	public static void sortedByTheFirstElement(int[][] intervals ) {
+		for( int i = 0; i < intervals.length; i++ ) {
+			for( int j = i; j < intervals.length; j++ ) {
+				if(intervals[i][0] > intervals[j][0] ) {
+					int[] tmp = intervals[i];
+					intervals[i] = intervals[j];
+					intervals[j] = tmp;
+				}
+			}
+		}
+	}
 }
