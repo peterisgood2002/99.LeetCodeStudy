@@ -7,6 +7,7 @@ import com.peter12.solution.data.ListNode;
 import com.peter12.solution.data.TreeNode;
 import com.peter12.solution.data.TreeNodeData;
 import com.peter12.solution.easy.EASY_0020_VALID_PARENTHESES;
+import com.peter12.solution.util.ResultCheck;
 import com.peter12.solution.util.Util;
 
 import junit.framework.Assert;
@@ -52,25 +53,25 @@ public class EASY_0119_PASCALS_TRIANGLE_II_TEST
     	
     	List<Integer> r1 = new Vector<Integer>();
     	r1.add(1);
-    	Assert.assertTrue(Util.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(0)));
+    	Assert.assertTrue(ResultCheck.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(0)));
     	
     	r1 = new Vector<Integer>();
     	r1.add(1);
     	r1.add(1);
-    	Assert.assertTrue(Util.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(01)));
+    	Assert.assertTrue(ResultCheck.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(01)));
     	
     	r1 = new Vector<Integer>();
     	r1.add(1);
     	r1.add(2);
     	r1.add(1);
-    	Assert.assertTrue(Util.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(2)));
+    	Assert.assertTrue(ResultCheck.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(2)));
     	
     	r1 = new Vector<Integer>();
     	r1.add(1);
     	r1.add(3);
     	r1.add(3);
     	r1.add(1);
-    	Assert.assertTrue(Util.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(3)));
+    	Assert.assertTrue(ResultCheck.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(3)));
     	
     	r1 = new Vector<Integer>();
     	r1.add(1);
@@ -78,7 +79,7 @@ public class EASY_0119_PASCALS_TRIANGLE_II_TEST
     	r1.add(6);
     	r1.add(4);
     	r1.add(1);
-    	Assert.assertTrue(Util.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(4)));
+    	Assert.assertTrue(ResultCheck.equalForList(r1, EASY_0119_PASCALS_TRIANGLE_II.getRow(4)));
     	
     	
     	

@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import com.peter12.solution.data.ListNode;
 import com.peter12.solution.easy.EASY_0020_VALID_PARENTHESES;
+import com.peter12.solution.util.ResultCheck;
 import com.peter12.solution.util.Util;
 
 import junit.framework.Assert;
@@ -51,19 +52,19 @@ public class EASY_0088_MERGE_SORTED_ARRAY_TEST
     	int[] nums2 = new int[] {2,5,6};
     	int[] ans = new int[] {1,2,2,3,5,6};
     	EASY_0088_MERGE_SORTED_ARRAY.merge(nums1, 3, nums2, 3);
-    	Assert.assertTrue( Util.equalsForArray(ans, nums1));
+    	Assert.assertTrue( ResultCheck.equalsForArray(ans, nums1));
     	
     	nums1 = new int[] {1};
     	nums2 = new int[0] ;
     	ans = new int[] {1};
     	EASY_0088_MERGE_SORTED_ARRAY.merge(nums1, 1, nums2, 0);
-    	Assert.assertTrue( Util.equalsForArray(ans, nums1));
+    	Assert.assertTrue( ResultCheck.equalsForArray(ans, nums1));
     	
     	nums1 = new int[] {4,5,6,0,0,0};
     	nums2 = new int[] {1,2,3};
     	ans = new int[] {1,2,3,4,5,6};
     	EASY_0088_MERGE_SORTED_ARRAY.merge(nums1, 3, nums2, 3);
-    	Assert.assertTrue( Util.equalsForArray(ans, nums1));
+    	Assert.assertTrue( ResultCheck.equalsForArray(ans, nums1));
     	
     }
   

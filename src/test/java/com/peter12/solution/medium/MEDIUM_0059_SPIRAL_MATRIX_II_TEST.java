@@ -18,7 +18,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class MEDIUM_0048_ROTATE_IMAGE_TEST 
+public class MEDIUM_0059_SPIRAL_MATRIX_II_TEST
 extends TestCase
 {
 	/**
@@ -26,7 +26,7 @@ extends TestCase
 	 *
 	 * @param testName name of the test case
 	 */
-	public MEDIUM_0048_ROTATE_IMAGE_TEST( String testName )
+	public MEDIUM_0059_SPIRAL_MATRIX_II_TEST( String testName )
 	{
 		super( testName );
 	}
@@ -36,7 +36,7 @@ extends TestCase
 	 */
 	public static Test suite()
 	{
-		return new TestSuite( MEDIUM_0048_ROTATE_IMAGE_TEST.class );
+		return new TestSuite( MEDIUM_0059_SPIRAL_MATRIX_II_TEST.class );
 	}
 
 	/**
@@ -50,19 +50,24 @@ extends TestCase
 
 	public static void testGetResult() {
 
-		int[][] data = new int[3][];
-		data[0] = new int[] {1, 2, 3};
-		data[1] = new int[] {4, 5, 6};
-		data[2] = new int[] {7, 8, 9};
-		
 		int[][] ans = new int[3][];
-		ans[0] = new int[] {7, 4, 1 };
-		ans[1] = new int[] {8, 5, 2 };
-		ans[2] = new int[] {9, 6, 3 };
+		ans[0] = new int[] {1, 2, 3};
+		ans[1] = new int[] {8, 9, 4};
+		ans[2] = new int[] {7, 6, 5};
 		
-		MEDIUM_0048_ROTATE_IMAGE.rotate(data);
+		int[][] result =MEDIUM_0059_SPIRAL_MATRIX_II.generateMatrix(3);
+		Assert.assertTrue( ResultCheck.equalsForArray(ans, result));
 		
-		Assert.assertTrue( ResultCheck.equalsForArray(data, ans));
+		ans = new int[4][];
+		ans[0] = new int[] {1,  2,  3 , 4};
+		ans[1] = new int[] {12, 13, 14, 5};
+		ans[2] = new int[] {11, 16, 15, 6};
+		ans[3] = new int[] {10, 9 , 8,  7};
+		result =MEDIUM_0059_SPIRAL_MATRIX_II.generateMatrix(4);
+		Assert.assertTrue( ResultCheck.equalsForArray(ans, result));
+		
+		
+		
 	}
 
 

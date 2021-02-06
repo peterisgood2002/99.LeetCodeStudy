@@ -7,6 +7,7 @@ import com.peter12.solution.data.ListNode;
 import com.peter12.solution.data.TreeNode;
 import com.peter12.solution.data.TreeNodeData;
 import com.peter12.solution.easy.EASY_0020_VALID_PARENTHESES;
+import com.peter12.solution.util.ResultCheck;
 import com.peter12.solution.util.Util;
 
 import junit.framework.Assert;
@@ -52,13 +53,13 @@ public class EASY_0107_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II_TEST
     	TreeNode tree = TreeNodeData.createTree();
     	List<List<Integer>> ans = createAnswer();
     	
-    	Assert.assertTrue( Util.equalsForList(ans, EASY_0107_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.levelOrderBottom(tree) )  );
+    	Assert.assertTrue( ResultCheck.equalsForList(ans, EASY_0107_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.levelOrderBottom(tree) )  );
     	
     	int[] nums1 = new int[] {1, 2, 2, 3, 4, 4, 3};
     	
     	tree = TreeNode.createTreeNode(nums1);
     	ans = createAnswer2();
-    	Assert.assertTrue( Util.equalsForList(ans, EASY_0107_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.levelOrderBottom(tree) )  );
+    	Assert.assertTrue( ResultCheck.equalsForList(ans, EASY_0107_BINARY_TREE_LEVEL_ORDER_TRAVERSAL_II.levelOrderBottom(tree) )  );
     	
     	
     }

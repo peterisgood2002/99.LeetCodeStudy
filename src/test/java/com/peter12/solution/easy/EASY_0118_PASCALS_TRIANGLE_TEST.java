@@ -7,6 +7,7 @@ import com.peter12.solution.data.ListNode;
 import com.peter12.solution.data.TreeNode;
 import com.peter12.solution.data.TreeNodeData;
 import com.peter12.solution.easy.EASY_0020_VALID_PARENTHESES;
+import com.peter12.solution.util.ResultCheck;
 import com.peter12.solution.util.Util;
 
 import junit.framework.Assert;
@@ -50,7 +51,7 @@ public class EASY_0118_PASCALS_TRIANGLE_TEST
     public static void testGetResult() {
     	
     	List<List<Integer>> ans = createAnswer();
-    	Assert.assertTrue(Util.equalsForList(ans, EASY_0118_PASCALS_TRIANGLE.generate(1)));
+    	Assert.assertTrue(ResultCheck.equalsForList(ans, EASY_0118_PASCALS_TRIANGLE.generate(1)));
     	
     	
     	

@@ -8,6 +8,7 @@ import com.peter12.solution.data.ListNodeData;
 import com.peter12.solution.data.TreeNode;
 import com.peter12.solution.data.TreeNodeData;
 import com.peter12.solution.easy.EASY_0020_VALID_PARENTHESES;
+import com.peter12.solution.util.ResultCheck;
 import com.peter12.solution.util.Util;
 
 import junit.framework.Assert;
@@ -54,20 +55,20 @@ public class EASY_0350_INTERSECTION_OF_TWO_ARRAYS_II_TEST
     	int[] nums2 = new int[] { 1, 1 };
     	int[] ans = new int[] {1};
     	int[] result = EASY_0350_INTERSECTION_OF_TWO_ARRAYS_II.intersect(nums1, nums2);
-    	Assert.assertTrue( Util.equalsForArray(ans, result));
+    	Assert.assertTrue( ResultCheck.equalsForArray(ans, result));
     	
     	
     	nums1 = new int[] { 4, 9, 5};
     	nums2 = new int[] { 9, 4, 9, 8, 4 };
     	ans = new int[] {4, 9};
     	result = EASY_0350_INTERSECTION_OF_TWO_ARRAYS_II.intersect(nums1, nums2);
-    	Assert.assertTrue( Util.equalsForArray(ans, result));
+    	Assert.assertTrue( ResultCheck.equalsForArray(ans, result));
     	
     	nums1 = new int[] { 1, 2, 2, 1};
     	nums2 = new int[] { 2, 2 };
     	ans = new int[] {2, 2};
     	result = EASY_0350_INTERSECTION_OF_TWO_ARRAYS_II.intersect(nums1, nums2);
-    	Assert.assertTrue( Util.equalsForArray(ans, result));
+    	Assert.assertTrue( ResultCheck.equalsForArray(ans, result));
     	
     	
     	

@@ -7,6 +7,7 @@ import com.peter12.solution.data.ListNode;
 import com.peter12.solution.data.TreeNode;
 import com.peter12.solution.data.TreeNodeData;
 import com.peter12.solution.easy.EASY_0020_VALID_PARENTHESES;
+import com.peter12.solution.util.ResultCheck;
 import com.peter12.solution.util.Util;
 
 import junit.framework.Assert;
@@ -58,7 +59,7 @@ extends TestCase
 		
 		int[][] result = MEDIUM_0057_INSERT_INTERVAL.insert(data, newInterval);
 		
-		Assert.assertTrue( Util.equalsForArray(ans, result));
+		Assert.assertTrue( ResultCheck.equalsForArray(ans, result));
 		//
 		data = new int[1][];
 		data[0] = new int[] { 1, 5};
@@ -69,7 +70,7 @@ extends TestCase
 		
 		result = MEDIUM_0057_INSERT_INTERVAL.insert(data, newInterval);
 		
-		Assert.assertTrue( Util.equalsForArray(ans, result));
+		Assert.assertTrue( ResultCheck.equalsForArray(ans, result));
 		
 		
 		//
@@ -88,7 +89,7 @@ extends TestCase
 		
 		result = MEDIUM_0057_INSERT_INTERVAL.insert(data, newInterval);
 		
-		Assert.assertTrue( Util.equalsForArray(ans, result));
+		Assert.assertTrue( ResultCheck.equalsForArray(ans, result));
 		
 		
 	}
