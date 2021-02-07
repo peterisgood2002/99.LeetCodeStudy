@@ -118,4 +118,23 @@ public class Util {
 		
 		return end;
 	} 
+	
+	public static void outputResult(boolean duplicate, List<Integer> r, List<List<Integer>> result) {
+		if( r != null && r.size() > 0 ) {
+			List<Integer> tmp = new Vector<Integer>();
+			for( int v : r ) {
+				tmp.add(v);
+			}
+			
+			if( duplicate ) {
+				result.add(tmp);
+			} else {
+				if( !result.contains(tmp ) ) {
+					result.add(tmp);
+				}
+			}
+			
+		}
+
+	}
 }

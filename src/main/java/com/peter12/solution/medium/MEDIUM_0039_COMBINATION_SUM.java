@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
 
+import com.peter12.solution.util.Util;
+
 public class MEDIUM_0039_COMBINATION_SUM {
 	public static List<List<Integer>> combinationSum(int[] candidates, int target) {
 
@@ -35,7 +37,7 @@ public class MEDIUM_0039_COMBINATION_SUM {
 			List<List<Integer>> result) {
 		
 		if( target == 0 ) {
-			outputResult(r, result );
+			Util.outputResult(true, r, result );
 			return;
 		}
 
@@ -60,17 +62,6 @@ public class MEDIUM_0039_COMBINATION_SUM {
 			
 
 		}
-	}
-
-	public static void outputResult(List<Integer> r, List<List<Integer>> result) {
-		if( r.size() > 0 ) {
-			List<Integer> tmp = new Vector<Integer>();
-			for( int v : r ) {
-				tmp.add(v);
-			}
-			result.add(tmp);
-		}
-
 	}
 	
 }
