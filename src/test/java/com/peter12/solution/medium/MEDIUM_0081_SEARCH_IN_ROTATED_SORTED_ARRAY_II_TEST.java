@@ -49,12 +49,12 @@ extends TestCase
 
 
 	public static void testGetResult() {
+
 		
-		int[] nums = new int[] {1};
-		Assert.assertTrue( MEDIUM_0081_SEARCH_IN_ROTATED_SORTED_ARRAY_II.search(nums, 1));
-		
-		nums = new int[] { 1, 0, 1, 1, 1};
+		int[] nums = new int[] { 1, 0, 1, 1, 1};
 		Assert.assertTrue( MEDIUM_0081_SEARCH_IN_ROTATED_SORTED_ARRAY_II.search(nums, 0));
+		nums = new int[] {1};
+		Assert.assertTrue( MEDIUM_0081_SEARCH_IN_ROTATED_SORTED_ARRAY_II.search(nums, 1));
 		
 		nums = new int[] {2, 5, 6, 0, 0, 1, 2 };
 		Assert.assertTrue( MEDIUM_0081_SEARCH_IN_ROTATED_SORTED_ARRAY_II.search(nums, 0));
@@ -62,6 +62,8 @@ extends TestCase
 		nums = new int[] {1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1 };
 		Assert.assertTrue( MEDIUM_0081_SEARCH_IN_ROTATED_SORTED_ARRAY_II.search(nums, 2));
 		
+		nums = new int[] {1,1,1,1,1,1,1,1,1,13,1,1,1,1,1,1,1,1,1,1,1,1};
+		Assert.assertTrue( MEDIUM_0081_SEARCH_IN_ROTATED_SORTED_ARRAY_II.search(nums, 13));
 		
 		
 		
