@@ -1,5 +1,7 @@
 package com.peter12.solution.medium;
 
+import com.peter12.solution.util.Util;
+
 public class MEDIUM_0033_SEARCH_IN_ROTATED_SORTED_ARRAY {
 	public static int search(int[] nums, int target) {
 		
@@ -14,31 +16,6 @@ public class MEDIUM_0033_SEARCH_IN_ROTATED_SORTED_ARRAY {
 		}
 		
 		
-		//Binary Search
-		int begin = 0;
-		int end = nums.length - 1;
-		
-		while( begin <= end ) {
-			double m = ( begin + end ) / 2 ;
-			int middle = (int) m ;
-			
-			int pm = (middle + pivot) % nums.length;
-			
-			if( nums[pm] == target ) {
-				return pm;
-			}
-			
-			if( nums[pm] > target  ) {
-				end = middle - 1;
-				
-			}
-			
-			if( nums[pm] < target ) {
-				begin = middle + 1 ;
-			
-			}
-		}
-		
-		return -1; //No found
+		return Util.search(nums, target, pivot);
 	} 
 }
