@@ -267,10 +267,17 @@ We also note the progress and experiences daily.
     <th></th>
   </tr>
   <tr>
-    <th>2020206</th>
+    <th>2020207</th>
     <th>Easy</BR>Medium</th>
     <th>120</BR>240</th>
     <th>120</BR>47</th>
+    <th></th>
+  </tr>
+   <tr>
+    <th>2020208</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>240</th>
+    <th>120</BR>55</th>
     <th></th>
   </tr>
 </table>
