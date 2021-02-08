@@ -49,11 +49,13 @@ extends TestCase
 
 
 	public static void testGetResult() {
-		Assert.assertEquals(0, MEDIUM_0091_DECODE_WAYS.numDecodings("01"));
+		
+		
 		Assert.assertEquals(3, MEDIUM_0091_DECODE_WAYS.numDecodings("226"));
+		Assert.assertEquals(1, MEDIUM_0091_DECODE_WAYS.numDecodings("2101"));
 		Assert.assertEquals(0, MEDIUM_0091_DECODE_WAYS.numDecodings("0"));
 		Assert.assertEquals(1, MEDIUM_0091_DECODE_WAYS.numDecodings("1"));
-		
+		Assert.assertEquals(0, MEDIUM_0091_DECODE_WAYS.numDecodings("01"));
 		Assert.assertEquals(2, MEDIUM_0091_DECODE_WAYS.numDecodings("12"));
 		Assert.assertEquals(2, MEDIUM_0091_DECODE_WAYS.numDecodings("21"));
 		Assert.assertEquals(1, MEDIUM_0091_DECODE_WAYS.numDecodings("27"));
