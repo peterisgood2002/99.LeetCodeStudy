@@ -95,7 +95,7 @@ public class Util {
 		}
 	}
 
-	public static int search( int[] data, int target) {
+	public static int binarySearch( int[] data, int target) {
 		int begin = 0;
 		int end = data.length - 1;
 
@@ -119,7 +119,7 @@ public class Util {
 		return end;
 	} 
 
-	public static int search( int[] nums, int target, int pivot) {
+	public static int binarySearch( int[] nums, int target, int pivot) {
 		//Binary Search
 		int begin = 0;
 		int end = nums.length - 1;

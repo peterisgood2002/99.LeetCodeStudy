@@ -13,10 +13,10 @@ public class MEDIUM_0074_SEARCH_A_2D_MATRIX {
 			col0[i] = matrix[i][0];
 		}
 		
-		int row = Util.search(col0, target);
+		int row = Util.binarySearch(col0, target);
 		
 		if( 0 <= row && row < r ) {
-			int col = Util.search(matrix[row], target);
+			int col = Util.binarySearch(matrix[row], target);
 			
 			if( 0 <= col && col < c ) {
 				return matrix[row][col] == target;

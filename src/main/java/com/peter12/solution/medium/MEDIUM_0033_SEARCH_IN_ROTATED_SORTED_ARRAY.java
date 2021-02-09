@@ -16,6 +16,6 @@ public class MEDIUM_0033_SEARCH_IN_ROTATED_SORTED_ARRAY {
 		}
 		
 		
-		return Util.search(nums, target, pivot);
+		return Util.binarySearch(nums, target, pivot);
 	} 
 }
