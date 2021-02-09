@@ -1,78 +1,98 @@
 package com.peter12.solution.medium;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.HashSet;
+import java.util.Set;
+
 import com.peter12.solution.data.TreeNode;
 import com.peter12.solution.util.Util;
 
 public class MEDIUM_0105_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL {
 
 	public static TreeNode buildTree(int[] preorder, int[] inorder) {
-		
-		if( preorder.length == 0 && inorder.length == 0 ) {
-			return null;
-		}
-		
-		TreeNode result = buildTreeBasedOnPreOrder(0, preorder.length - 1, preorder, 0, inorder.length - 1, inorder);
-		return result;
-	}
-	
-	
-	public static TreeNode buildTreeBasedOnPreOrder( int pbegin, int pend, int[] preorder, 
-			                                         int ibegin, int iend, int[] inorder) {
-		
-		if( pbegin > pend ) {
-			return null;
-		}
-		
-		int value = preorder[pbegin];
-		
-		TreeNode result = new TreeNode(value);
+
+		/*
+		 * Solution: https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
+		 * InOrder traversal is Left-Root-Right and PreOrder traversal is Root-Left-Right. Also, 
+		 * first node in the PreOrder traversal is always the root node and 
+		 * the first node in the InOrder traversal is the leftmost node in the tree.
+
+           Maintain two data-structures : 
+           1. Stack: store the path we visited while traversing PreOrder array) 
+           2. Set: maintain the node in which the next right subtree is expected).
+		 * */
+
+		/*
+		 *            3 
+		 *      9         20       
+		 *    8   10    15   7         
+		 * Preorder = [3, 9, 8, 10, 20 ,15, 7]
+		 * Inorder  = [8, 9, 10, 3, 15, 20, 7]
+		 *  node = 8
+		 * Stack = [3 9 8]  ==> [3 9]
+		 * mostRight= []       ==> [9]
+		 *  node = 10
+		 * Stack = [3 9]
+		 * topLeft= [9]
+		 * 
+		 * 
+		 * */
+
+		TreeNode root = null;
+		TreeNode mostRight = null;
+		Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+
+		int iIndex = 0;
+
+		for( int i = 0; i < preorder.length; i++ ) {
+
+			int val = preorder[i];
+			//Add node until we find out inorder[index] == value
+			TreeNode node = new TreeNode(val);
+			if( root == null ) {
+				root = node;
+			}
+
+
+			buildLink(node, mostRight, stack);
+
+			stack.push(node);
+
+			if( val == 2 ) {
+				int test = 0;
+			}
+			if( iIndex < inorder.length && inorder[iIndex] == val ) {
 				
-		int index = search(value, inorder);// Find the index of the value
-		
-		result.left = buildTreeBasedOnInOrder(ibegin, index - 1, inorder, pbegin + 1, pend, preorder);
-		result.right = buildTreeBasedOnInOrder( index + 1, iend, inorder, pbegin + 1, pend, preorder);
-		
-		return result;
-			
-	}
-	
-	public static TreeNode buildTreeBasedOnInOrder( int ibegin, int iend, int[] inorder, 
-			                                        int pbebin, int pend, int[]  preorder) {
-		if( ibegin > iend ) {
-			return null;
-		}
-		
-		int preBegin = Integer.MAX_VALUE;
-		int preEnd = Integer.MIN_VALUE;
-		
-		for( int i = ibegin; i <= iend; i++ ) {
-			int index = search( inorder[i], preorder );
-			
-			if( index < preBegin ) {
-				preBegin = index;
+				while( iIndex < inorder.length && stack.size() > 0 && /*sneak the stack first*/stack.peek().val == inorder[iIndex] ) {
+					mostRight = stack.pop();
+					val = mostRight.val;
+					iIndex++;
+				}
+
+
+				if( mostRight != null  ) {
+					stack.push(mostRight);
+				} 
 			}
 			
-			if( index > preEnd ) {
-				preEnd = index;
+		}
+
+		return root;
+	}
+
+	public static void buildLink(TreeNode node, TreeNode mostRight, Deque<TreeNode> stack) {
+		if( stack.isEmpty() == false) {
+			TreeNode parent = stack.peek();
+
+			if( mostRight != null && mostRight.val == parent.val ) {
+				parent.right = node;
+				stack.pop(); // Remove the stack because the parent has no child to add 
+			} else {
+				parent.left = node;
+
 			}
 		}
-		
-		if( preBegin == preEnd ) {
-			return new TreeNode( preorder[preBegin] );
-		} else {
-			return buildTreeBasedOnPreOrder(preBegin, preEnd, preorder, ibegin, iend, inorder);
-		}
-		
 	}
-	
-	public static int search( int target, int[] nums) {
-		
-		for( int i = 0; i < nums.length; i++ ) {
-			if( nums[i] == target) {
-				return i;
-			}
-		}
-		
-		return -1;
-	}
+
 }

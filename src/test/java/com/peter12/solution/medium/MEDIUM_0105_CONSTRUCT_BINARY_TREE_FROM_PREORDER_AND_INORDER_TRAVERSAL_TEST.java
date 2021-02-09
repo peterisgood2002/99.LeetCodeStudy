@@ -50,10 +50,25 @@ extends TestCase
 
 	public static void testGetResult() {
 
-		int[] preorder = new int[] {1, 2, 3};
-		int[] inorder = new int[] {3, 2, 1};
+		//
+		int[] preorder = new int[] {3, 1, 2, 4};
+		int[] inorder = new int[] {1, 2, 3, 4};
 
 		TreeNode result = MEDIUM_0105_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.buildTree(preorder, inorder);
+
+		Assert.assertTrue( result != null);
+		//
+		preorder = new int[] {3, 9, 20, 15, 7};
+		inorder = new int[] {9, 3, 15, 20, 7};
+
+		result = MEDIUM_0105_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.buildTree(preorder, inorder);
+
+		Assert.assertTrue( result != null);
+		//
+		preorder = new int[] {1, 2, 3};
+		inorder = new int[] {3, 2, 1};
+
+		result = MEDIUM_0105_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.buildTree(preorder, inorder);
 
 		Assert.assertTrue( result != null);
 		//
@@ -63,15 +78,9 @@ extends TestCase
 		result = MEDIUM_0105_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.buildTree(preorder, inorder);
 
 		Assert.assertTrue( result != null);
+		//
 		preorder = new int[] {1, 2};
 		inorder = new int[] {2, 1};
-
-		result = MEDIUM_0105_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.buildTree(preorder, inorder);
-
-		Assert.assertTrue( result != null);
-
-		preorder = new int[] {3, 9, 20, 15, 7};
-		inorder = new int[] {9, 3, 15, 20, 7};
 
 		result = MEDIUM_0105_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERSAL.buildTree(preorder, inorder);
 
