@@ -59,9 +59,6 @@ public class MEDIUM_0105_CONSTRUCT_BINARY_TREE_FROM_PREORDER_AND_INORDER_TRAVERS
 
 			stack.push(node);
 
-			if( val == 2 ) {
-				int test = 0;
-			}
 			if( iIndex < inorder.length && inorder[iIndex] == val ) {
 				
 				while( iIndex < inorder.length && stack.size() > 0 && /*sneak the stack first*/stack.peek().val == inorder[iIndex] ) {
