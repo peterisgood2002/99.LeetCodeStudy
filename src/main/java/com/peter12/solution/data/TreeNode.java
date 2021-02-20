@@ -13,6 +13,29 @@ public class TreeNode {
 		this.right = right;
 	}
 	
+	public static TreeNode createSkewTree(Integer[] data) {
+
+		TreeNode result = null;
+		TreeNode pre = result;
+		
+		for( int val : data) {
+			TreeNode current = new TreeNode(val);
+			
+			if( pre == null) {
+				result = current;
+			} else {
+				pre.right = current;
+			}
+			
+			pre = current;
+			
+		}
+		
+
+		return result;
+		
+	}
+		
 	public static TreeNode createTreeNode(Integer[] data ) {
 		if( data.length == 1 ) {
 			return new TreeNode(data[0]); 
