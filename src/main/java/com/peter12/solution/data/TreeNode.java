@@ -13,6 +13,34 @@ public class TreeNode {
 		this.right = right;
 	}
 	
+	public static TreeNode createTreeNode(Integer[] data ) {
+		if( data.length == 1 ) {
+			return new TreeNode(data[0]); 
+		}
+		
+		TreeNode result = createNextLevel(0, data);
+		
+		return result;
+		
+	}
+	
+	public static TreeNode createNextLevel(int level, Integer[] data ) {
+		if( level >= data.length ) {
+			return null;
+		}
+		
+		if(data[level] == null ) {
+			return null;
+		}
+		
+		TreeNode result = new TreeNode(data[level]);
+		
+		result.left = createNextLevel(2 * level + 1, data);
+		result.right = createNextLevel(2 * level + 2, data);
+		
+		return result;
+	}
+	
 	public static TreeNode createTreeNode(int[] data ) {
 		if( data.length == 1) {
 			return new TreeNode(data[0]);
@@ -27,6 +55,7 @@ public class TreeNode {
 		if( level >= data.length) {
 			 return null;
 		}
+		
 		
 		
 		TreeNode result = new TreeNode(data[level]);
