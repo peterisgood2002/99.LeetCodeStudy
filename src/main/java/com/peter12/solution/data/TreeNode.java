@@ -1,8 +1,8 @@
 package com.peter12.solution.data;
 
-public class TreeNode {
+public class TreeNode extends AbstractTreeNode{
 
-	public int val;
+	
 	public TreeNode left;
 	public TreeNode right;
 	public TreeNode() {}
@@ -14,108 +14,46 @@ public class TreeNode {
 	}
 	
 	public static TreeNode createSkewTree(Integer[] data) {
+		AbstractTreeNode result = TreeFactory.createSkewTree(TreeNode.class, data);
 
-		TreeNode result = null;
-		TreeNode pre = result;
-		
-		for( int val : data) {
-			TreeNode current = new TreeNode(val);
-			
-			if( pre == null) {
-				result = current;
-			} else {
-				pre.right = current;
-			}
-			
-			pre = current;
-			
-		}
-		
-
-		return result;
+		return (TreeNode) result;
 		
 	}
 		
 	public static TreeNode createTreeNode(Integer[] data ) {
-		if( data.length == 1 ) {
-			return new TreeNode(data[0]); 
-		}
-		
-		TreeNode result = createNextLevel(0, data);
-		
-		return result;
+		AbstractTreeNode result = TreeFactory.createTreeNode(TreeNode.class, data);
+
+		return (TreeNode) result;
 		
 	}
 	
-	public static TreeNode createNextLevel(int level, Integer[] data ) {
-		if( level >= data.length ) {
-			return null;
-		}
-		
-		if(data[level] == null ) {
-			return null;
-		}
-		
-		TreeNode result = new TreeNode(data[level]);
-		
-		result.left = createNextLevel(2 * level + 1, data);
-		result.right = createNextLevel(2 * level + 2, data);
-		
-		return result;
-	}
 	
 	public static TreeNode createTreeNode(int[] data ) {
-		if( data.length == 1) {
-			return new TreeNode(data[0]);
-		}
-		
-		TreeNode result = createNextLevel(0, data );
-		
-		return result;
+		AbstractTreeNode result = TreeFactory.createTreeNode(TreeNode.class, data);
+
+		return (TreeNode) result;
 	}
-	
-	public static TreeNode createNextLevel(int level, int[] data ) {
-		if( level >= data.length) {
-			 return null;
-		}
-		
-		
-		
-		TreeNode result = new TreeNode(data[level]);
-		
-		result.left = createNextLevel(2 * level + 1, data);
-		result.right = createNextLevel(2 * level + 2, data);
-		
-		return result;
-	}
-	
 	
 	
 	@Override
-	public String toString() {
+	public AbstractTreeNode getLeft() {
 		
-		StringBuilder result = new StringBuilder();
-		result.append(    "\n[VAL = "+ val +"] ");
-		//Left
-		result.append(    "\n  L:{"          );
+		return left;
+	}
+	@Override
+	public AbstractTreeNode getRight() {
 		
-		if( left != null ) {
-			result.append(left.toString().replace("\n", "\n     ")   );
-		}else {
-	        result.append("\n     NULL");
-		}
-		result.append(    "\n    }"            );
-		//Right
-		result.append(    "\n  R:{"          );
-		if( right != null ) {
-			result.append(right.toString().replace("\n", "\n     ")   );
-		}else {
-	        result.append("\n     NULL");
-		}
-		result.append(    "\n    }"            );
+		return right;
+	}
+	@Override
+	public void setLeft(AbstractTreeNode node) {
+		left = (TreeNode)node;
 		
+	}
+	@Override
+	public void setRight(AbstractTreeNode node) {
+		right = (TreeNode)node;
 		
-		return result.toString();
 	}
 	
 	
