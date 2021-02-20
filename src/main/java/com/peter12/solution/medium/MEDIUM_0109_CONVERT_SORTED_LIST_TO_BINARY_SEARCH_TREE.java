@@ -6,51 +6,42 @@ import com.peter12.solution.data.TreeNode;
 public class MEDIUM_0109_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE {
 	public static TreeNode sortedListToBST(ListNode head) {
 		
-		if( head == null ) {
-			return null;
-		}
-		
-
-		int size = 0;
-		ListNode current = head;
-		while( current != null ) {
-			size++;
-			
-			current = current.next;
-		}
-		
-		TreeNode root = sortedListToBST(size, head);
+		TreeNode root = sortedListToBST(head, null);
 		
 		return root;
 		
 	}
 	
-	public static TreeNode sortedListToBST(int size, ListNode head) {
-		if( size == 1 ) {
+	public static TreeNode sortedListToBST(ListNode head, ListNode end) {
+				
+		if( head == end ) {
+			return null;
+		}
+		if(  head.next == end ) {
 			return new TreeNode( head.val );
 		}
 		
-		if( size == 2 ) {
-			TreeNode root = new TreeNode( head.next.val );
-			root.left = new TreeNode( head.val );
-			
-			return root;
-		}
+		ListNode middle = findMiddle( head, end);
 		
-		ListNode current = head;
-		for( int i = 0; i < size / 2; i++ ) {
-			current = current.next;
-		}
+		TreeNode root = new TreeNode( middle.val);
 		
-		TreeNode root = new TreeNode( current.val );
-		
-		root.left = sortedListToBST( size / 2, head);
-		
-		int rightSize = ( size % 2 == 0 )? size / 2 - 1 : size / 2;
-		root.right = sortedListToBST( rightSize, current.next);
+		root.left = sortedListToBST(head, middle);
+		root.right = sortedListToBST(middle.next, end);
 		
 		return root;
+		
 	}
 	
-	
+	public static ListNode findMiddle( ListNode begin,  ListNode end) {
+			
+		ListNode slow = begin;
+		ListNode fast = begin;
+		
+		while( fast != end && fast.next != end ) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		
+		return slow;
+	}
 }

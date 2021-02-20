@@ -50,7 +50,7 @@ extends TestCase
 
 	public static void testGetResult() {
 
-		int[] nums = new int[] {-11, -10, -3, 0, 5, 9};
+		int[] nums = new int[] {-10, -3, 0, 5, 9};
 		ListNode head = ListNode.getLinkList(nums);
 		
 		TreeNode result = MEDIUM_0109_CONVERT_SORTED_LIST_TO_BINARY_SEARCH_TREE.sortedListToBST(head);
