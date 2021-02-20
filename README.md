@@ -287,6 +287,20 @@ We also note the progress and experiences daily.
     <th>120</BR>59</th>
     <th></th>
   </tr>
+  <tr>
+    <th>2020220</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>240</th>
+    <th>120</BR>64</th>
+    <th>
+		<p>
+          <ol>
+             <li>we can find out the middle node by fast and slow point in LinkedList
+			 </li>	 
+          </ol>
+        </p>
+	</th>
+  </tr>
 </table>
 
 
