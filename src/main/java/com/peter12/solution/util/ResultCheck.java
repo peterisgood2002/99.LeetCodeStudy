@@ -38,6 +38,25 @@ public class ResultCheck {
     	return true;
     }
 	
+	public static boolean equalsForArray( char[][] ans, char[][] data ) {
+		if( ans.length != data.length ) {
+			return false;
+		}
+		
+		for( int i = 0; i < ans.length; i++ ) {
+			if( ans[i].length != data[i].length ) {
+				return false;
+			}
+			
+			for( int j = 0; j < ans[i].length; j++ ) {
+				if( ans[i][j] != data[i][j] ) {
+					return false;
+				}
+			}
+		}
+		
+		return true;
+	}
 	public static boolean  equalsForList( List<List<Integer>> a, List<List<Integer>> b ) {
 		if( a.size() != b.size() ) {
 			return false;
@@ -66,4 +85,6 @@ public class ResultCheck {
 		
 		return true;
 	}
+	
+	
 }
