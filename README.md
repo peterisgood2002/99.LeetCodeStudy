@@ -295,7 +295,21 @@ We also note the progress and experiences daily.
     <th>
 		<p>
           <ol>
-             <li>we can find out the middle node by fast and slow point in LinkedList
+             <li>We can find out the middle node by fast and slow point in LinkedList
+			 </li>	 
+          </ol>
+        </p>
+	</th>
+  </tr>
+  <tr>
+    <th>2020223</th>
+    <th>Easy</BR>Medium</th>
+    <th>120</BR>240</th>
+    <th>120</BR>68</th>
+    <th>
+		<p>
+          <ol>
+             <li>If the problem can not be solved directly, please use the backward reasoning
 			 </li>	 
           </ol>
         </p>
