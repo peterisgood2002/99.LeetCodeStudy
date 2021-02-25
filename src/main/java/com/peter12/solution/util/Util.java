@@ -167,4 +167,23 @@ public class Util {
 		}
 
 	}
+	
+	public static void outputResultForString(boolean duplicate, List<String> r, List<List<String>> result) {
+		if( r != null && r.size() > 0 ) {
+			List<String> tmp = new Vector<String>();
+			for( String v : r ) {
+				tmp.add(v);
+			}
+
+			if( duplicate ) {
+				result.add(tmp);
+			} else {
+				if( !result.contains(tmp ) ) {
+					result.add(tmp);
+				}
+			}
+
+		}
+
+	}
 }
