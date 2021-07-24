@@ -7,44 +7,41 @@ import java.util.List;
 public class MEDIUM_1329_SORT_THE_MATRIX_DIAGONALLY {
 	public int[][] diagonalSort(int[][] mat) {
 
+		/*
+         Solution: https://www.youtube.com/watch?v=JBqUl7avtG8
+		 */
 		int row = mat.length;
 		int col = mat[0].length;
 
 		//Bottom Triangle
-		for( int i = row - 1; i >= 0; i--) {
-			List<Integer> d = new ArrayList<Integer>();
-			for( int r = i, c = 0; r < row && c < col; r++, c++ ) {
-				d.add( mat[r][c]);
-			}
+		for( int i = 0; i < row; i++ ) {
 
-			Collections.sort(d);
-
-			int k = 0;
-			for( int r = i, c = 0; r < row && c < col; r++, c++ ) {
-				mat[r][c] = d.get(k++);
-			}
-
+			sort(i, 0, row, col, mat);
 		}
 
 
-
 		//Top Triangle
-		for( int i = col - 1; i >= 1; i--) {
-			List<Integer> d = new ArrayList<Integer>();
-			for( int c = i, r = 0; c < col && r < row; c++, r++ ) {
-				d.add( mat[r][c]);
-			}
-
-			Collections.sort(d);
-
-			int k = 0;
-			for( int c = i, r = 0; c < col && r < row; c++, r++ ) {
-				mat[r][c] = d.get(k++);
-			}
+		for( int i = 1; i < col; i++ ) {
+			sort(0, i, row, col, mat);
 		}
 
 		return mat;
 
+
+	}
+
+	public void sort( int r, int c, int row, int col, int[][] mat ) {
+		List<Integer> d = new ArrayList<Integer>();
+		for( int i = r, j = c; i < row && j < col; i++, j++ ) {
+			d.add( mat[i][j] );
+		}
+
+		Collections.sort( d );
+
+		int k = 0;
+		for( int i = r, j = c; i < row && j < col; i++, j++ ) {
+			mat[i][j] = d.get(k++);
+		}
 
 	}
 }
