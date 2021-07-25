@@ -10,59 +10,28 @@ import java.util.Vector;
 
 public class MEDIUM_0763_PARTITION_LABELS {
 	public List<Integer> partitionLabels(String s) {
-		HashMap<Character, int[] > range = new  HashMap<Character, int[] >();
+		//1. Find the last element for every characters
+        int[] last = new int[26];
         for( int i = 0; i < s.length(); i++ ) {
-            char ch = s.charAt(i);
-            
-            int[] r = range.get(ch);
-            if( r == null ) {
-                r = new int[2];
-                
-                range.put(ch, r);
-                r[0] = i;
-                r[1] = i;
-            } else {
-                r[1] = i;
-            }
-            
+            last[ s.charAt(i) - 'a' ] = i;
         }
         
+        int groupB = 0;
+        int groupE = 0;
         
-        List<int[]> values = new ArrayList<int[]>();
-        for( int[] v : range.values() ) {
-            values.add(v);
-        }
-        
-        values.sort((int[] a, int[] b ) -> a[0] - b[0]);
         List<Integer> result = new ArrayList<Integer>();
-        
-        int total = 0;
-        int begin = 0;
-        int end = 0;
-        
-        for( int[] r : values ) {
+        for( int i = 0; i < s.length(); i++ ) {
             
+            groupE = Math.max( groupE, last[s.charAt(i) - 'a'] );
             
-            System.out.println(  "[ x, y ] = [" + r[0] + "," + r[1] +"]");
-            if( end < r[0] ) {
-                //Another Group
-                
-                System.out.println( "Another Group [ x, y ] = [" + r[0] + "," + r[1] +"]");
-                result.add( end - begin + 1 );
-                total = 0;
-                begin = r[0];
+            if( groupE == i ) {
+                //We find one group
+                result.add( groupE - groupB + 1);
+                groupB = groupE + 1;
             }
             
-            if( end < r[1] ) {
-                end = r[1];
-            }
-            
-            System.out.println( "BEGIN = " + begin + " END = " + end);
-            total++;
         }
         
-        //Add the last group
-        result.add(end - begin + 1);
         return result;
     }
 }
