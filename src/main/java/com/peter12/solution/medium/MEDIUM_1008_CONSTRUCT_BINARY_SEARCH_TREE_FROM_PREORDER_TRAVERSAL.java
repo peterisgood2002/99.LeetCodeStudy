@@ -8,39 +8,32 @@ import com.peter12.solution.data.TreeNode;
 public class MEDIUM_1008_CONSTRUCT_BINARY_SEARCH_TREE_FROM_PREORDER_TRAVERSAL {
 	public TreeNode bstFromPreorder(int[] preorder) {
 
-		List<Integer> data = new ArrayList<Integer>();
-		for( int v : preorder ) {
-			data.add(v);
+		TreeNode root = new TreeNode( preorder[0]);
+
+		for( int i = 1; i < preorder.length; i++ ) {
+			insert( root, preorder[i]);
 		}
 
-		return getBinarySearchTree(data);
+		return root;
 	}
 
-	public TreeNode getBinarySearchTree( List<Integer> data ) {
+	public void insert( TreeNode root, int val) {
 
-		if( data.size() == 0 ) {
-			return null;
-		}
-
-		int val = data.get(0);
-		TreeNode root = new TreeNode( val );
-
-		List<Integer> ll = new ArrayList<Integer>();
-		List<Integer> lr = new ArrayList<Integer>();
-
-		for( int i = 1; i < data.size(); i++ ) {
-			int v = data.get(i);
-
-			if( v < val ) {
-				ll.add(v);
+		if( root.val < val ) {
+			if( root.right == null ) {
+				root.right = new TreeNode( val);
 			} else {
-				lr.add(v);
+				insert( root.right, val);
+			}
+
+		} else {
+
+			if( root.left == null ) {
+				root.left = new TreeNode( val );
+			} else {
+				insert( root.left, val);
 			}
 		}
 
-		root.left = getBinarySearchTree( ll );
-		root.right = getBinarySearchTree( lr );
-
-		return root;
 	}
 }
