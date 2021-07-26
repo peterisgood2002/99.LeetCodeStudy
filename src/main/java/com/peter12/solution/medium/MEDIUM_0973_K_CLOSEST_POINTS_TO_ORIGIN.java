@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-public class MEDIUM_973_K_CLOSEST_POINTS_TO_ORIGIN {
+public class MEDIUM_0973_K_CLOSEST_POINTS_TO_ORIGIN {
 	public int[][] kClosest(int[][] points, int k) {
 
 		HashMap<Double, List<int[]>> distance = new HashMap<Double, List<int[]>>();
