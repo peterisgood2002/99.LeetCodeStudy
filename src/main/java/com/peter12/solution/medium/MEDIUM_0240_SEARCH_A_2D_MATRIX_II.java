@@ -2,41 +2,29 @@ package com.peter12.solution.medium;
 
 public class MEDIUM_0240_SEARCH_A_2D_MATRIX_II {
 	public boolean searchMatrix(int[][] matrix, int target) {
-		boolean result = false;
 
-		for( int r = 0; r < matrix.length; r++ ) {
-			int index = binarySearch( target, matrix[r]);
-
-			if( index != -1) {
-				result = true;
-			}
-		}
-
-		return result;
+		/*
+        Solution: https://medium.com/@ChYuan/leetcode-240-search-a-2d-matrix-ii-%E5%BF%83%E5%BE%97-medium-f2cc789cbcad
+		 */
+		//Start from top right
+		int r = 0;
+		int c = matrix[0].length - 1;
 
 
-	}
+		while( r < matrix.length && c >= 0 ) {
 
-	public int binarySearch( int target, int[] data ) {
-		int begin = 0;
-		int end = data.length - 1;
-
-		while( begin <= end ) {
-			int middle = ( begin + end ) / 2;
-
-			if( data[middle] == target ) {
-				return middle;
+			if( matrix[r][c] == target ) {
+				return true;
 			}
 
-			if( data[middle] < target ) {
-				begin = middle + 1;
+			if( matrix[r][c] > target) {
+				c--; //move to right    
 			} else {
-				end = middle - 1;
+				r++;// move to bottom
 			}
 		}
 
-		//can not find
-		return -1;
+		return false;
 
 	}
 }
