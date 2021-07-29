@@ -1,5 +1,7 @@
 package com.peter12.solution.easy;
 
+import java.util.HashMap;
+
 public class EASY_0771_JEWELS_AND_STONES {
 	public int numJewelsInStones(String jewels, String stones) {
 
