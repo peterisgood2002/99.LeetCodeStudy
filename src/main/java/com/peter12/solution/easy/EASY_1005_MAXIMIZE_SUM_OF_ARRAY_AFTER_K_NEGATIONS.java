@@ -1,4 +1,4 @@
-package com.peter12.solution.medium;
+package com.peter12.solution.easy;
 
 import java.util.Arrays;
 
