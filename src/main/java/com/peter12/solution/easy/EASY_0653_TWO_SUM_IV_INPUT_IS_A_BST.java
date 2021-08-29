@@ -2,6 +2,7 @@ package com.peter12.solution.easy;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 import com.peter12.solution.data.TreeNode;
@@ -9,40 +10,28 @@ import com.peter12.solution.data.TreeNode;
 public class EASY_0653_TWO_SUM_IV_INPUT_IS_A_BST {
 	public boolean findTarget(TreeNode root, int k) {
 
-		List<Integer> node = new ArrayList<Integer>();
-
-		dfs( root, node);
-
 		/*
-          A + B = k
-          B = k - A
+          Solution: https://www.cnblogs.com/cnoodle/p/15183042.html
 		 */
-		HashMap<Integer, Integer> bToi = new HashMap<Integer, Integer>();
-		for( int i = 0; i < node.size(); i++ ) {
-			int a = node.get(i);
-			Integer index = bToi.get( k - a );
-			if( index != null) {
-				return true;
-			}
+		HashSet<Integer> node = new HashSet<Integer>();
 
-			bToi.put(a, i);
+		return dfs( root, k, node);
 
-		}
-
-
-		return false;
 	}
 
-	public void dfs( TreeNode root, List<Integer> node) {
+	public boolean dfs( TreeNode root, int k, HashSet<Integer> node) {
 
 		if( root == null ) {
-			return;
+			return false;
 		}
 
-		node.add( root.val);
+		if( node.contains( k - root.val ) ) {
+			return true;
+		}
 
-		dfs( root.left, node);
-		dfs( root.right, node);
+		node.add( root.val );
+
+		return dfs( root.left, k, node) || dfs( root.right, k, node);
 
 	}
 }
